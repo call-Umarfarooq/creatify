@@ -16,6 +16,19 @@
 
 body {
   color: var(--foreground);
-  background: var(--background);
+  background: linear-gradient(40deg, #111315, #111315);
   font-family: Arial, Helvetica, sans-serif;
+  
+}
+
+.side-color{
+ background-color: hsla(0,0%,100%,.05);
+}
+.no-scrollbar {
+  scrollbar-width: none; /* For Firefox */
+  -ms-overflow-style: none; /* For Internet Explorer and Edge */
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
 }

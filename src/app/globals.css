@@ -32,3 +32,62 @@ body {
 .no-scrollbar::-webkit-scrollbar {
   display: none; /* For Chrome, Safari, and Opera */
 }
+
+.text-color-title {
+  color: hsla(0, 0%, 100%, .9);
+}
+
+.text-title-h4 {
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 600;
+}
+.text-title-h8 {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 600;
+}
+
+.text-color-support, .text-color-support\/50, .text-color-support\/\[0\.5\] {
+  color: hsla(0, 0%, 100%, .5);
+}
+
+.text-title-h6 {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 600;
+}
+.text-title-h1 {
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: 700;
+}
+.text-purple-500 {
+  --tw-text-opacity: 1;
+  color: rgb(108 108 245 / var(--tw-text-opacity));
+}
+.text-color-body, .text-color-body\/70 {
+  color: hsla(0, 0%, 100%, .7);
+}
+.text-body-sm {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+}
+.text-color-support, .text-color-support\/50, .text-color-support\/\[0\.5\] {
+  color: hsla(0, 0%, 100%, .5);
+}
+.bg-brand {
+  --tw-bg-opacity: 1;
+  background-color: rgb(108 108 245 / var(--tw-bg-opacity));
+}
+.border-solid {
+  border-style: solid;
+}
+.bg-bg-3 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(24 26 31 / var(--tw-bg-opacity));
+}
+.border-line-1, .border-line-1\/\[0\.08\] {
+  border-color: hsla(0, 0%, 100%, .08);
+}

@@ -4,33 +4,35 @@ import Modal from "react-modal";
 import { Crossicon } from "../utils/SvgIcons";
 
 const customStyles = {
-  content: {
-    top: "50%",
-    left: "50%",
-    right: "auto",
-    bottom: "auto",
-    backgroundColor: "transparent",
-    padding: "0px",
-    transform: "translate(-50%, -50%)",
-    boxShadow: "0px 0px 7px rgba(0, 0, 0, 0.2)",
-    transition: "all 0.3s",
-    overflow: "visible",
-    borderRadius: "24px",
-    border: "1px solid rgba(255, 255, 255, 0.2)",
-  },
-  overlay: { zIndex: 1000 },
-};
+    content: {
+      top: "50%",
+      left: "50%",
+      right: "auto",
+      bottom: "auto",
+      transform: "translate(-50%, -50%)",
+      backgroundColor: "#181818",
+      border: "1px solid rgba(255, 255, 255, 0.2)",
+      borderRadius: "12px",
+      padding: "20px",
+    },
+    overlay: {
+      zIndex: 1000,
+      backgroundColor: "rgba(0, 0, 0, 0.75)",
+    },
+  };
 
 interface IModalProps {
   isOpen: boolean;
   children: any;
   onClose: (e?: React.MouseEvent) => void;
+  title?:any
 }
 
-function ModalComponent({
+function LimitexceededModel({
   isOpen,
   children,
   onClose,
+  title
 }: IModalProps) {
   return (
     <Modal
@@ -40,11 +42,11 @@ function ModalComponent({
     >
       <div
         id="popular-tools-modal"
-        className="row-start-2 w-full min-w-0 rounded-3xl border-[1px] border-white/[0.2] bg-[#181818] pt-10 pr-7 pb-5 pl-7 ring-1 ring-zinc-950/10 sm:mb-auto sm:rounded-[19px] shadow-unsubscription-modal sm:max-w-4xl"
+        className=""
       >
         <div className="flex flex-row items-center justify-between">
           <p className="text-pretty font-bold text-lg/6 text-white sm:text-3xl/6 font-sans">
-            Popular tools
+           {title}
           </p>
           <button
           onClick={onClose}
@@ -58,7 +60,7 @@ function ModalComponent({
             ></span>
           </button>
         </div>
-        <div className=" no-scrollbar relative mt-5 grid max-h-[500px] min-h-[300px] w-full grid-cols-1 gap-6 overflow-y-auto sm:grid-cols-2 md:grid-cols-3">
+        <div className="">
           {children}
         </div>
       </div>
@@ -66,4 +68,4 @@ function ModalComponent({
   );
 }
 
-export default ModalComponent;
+export default LimitexceededModel;

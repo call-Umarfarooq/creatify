@@ -25,3 +25,92 @@ export const buttons = [
       styles: "opacity-50 hover:opacity-100",
     },
   ];
+
+  export const avatarData = [
+    {
+      videoSrc: "https://dpbavq092lwjh.cloudfront.net/creators/010e03c6-f9f8-4317-bf1a-a030df64657a/l.mp4",
+      posterSrc: "https://dpbavq092lwjh.cloudfront.net/creators/010e03c6-f9f8-4317-bf1a-a030df64657a/l.png",
+      userName: "John Doe"
+    },
+    {
+      videoSrc: "https://dpbavq092lwjh.cloudfront.net/creators/010e03c6-f9f8-4317-bf1a-a030df64657a/l.mp4",
+      posterSrc: "https://dpbavq092lwjh.cloudfront.net/creators/010e03c6-f9f8-4317-bf1a-a030df64657a/l.png",
+      userName: "John Doe"
+    },
+    {
+      videoSrc: "https://dpbavq092lwjh.cloudfront.net/creators/010e03c6-f9f8-4317-bf1a-a030df64657a/l.mp4",
+      posterSrc: "https://dpbavq092lwjh.cloudfront.net/creators/010e03c6-f9f8-4317-bf1a-a030df64657a/l.png",
+      userName: "John Doe"
+    },
+    {
+      videoSrc: "https://dpbavq092lwjh.cloudfront.net/creators/010e03c6-f9f8-4317-bf1a-a030df64657a/l.mp4",
+      posterSrc: "https://dpbavq092lwjh.cloudfront.net/creators/010e03c6-f9f8-4317-bf1a-a030df64657a/l.png",
+      userName: "John Doe"
+    },
+    {
+      videoSrc: "https://dpbavq092lwjh.cloudfront.net/creators/010e03c6-f9f8-4317-bf1a-a030df64657a/l.mp4",
+      posterSrc: "https://dpbavq092lwjh.cloudfront.net/creators/010e03c6-f9f8-4317-bf1a-a030df64657a/l.png",
+      userName: "John Doe"
+    },
+    {
+      videoSrc: "https://dpbavq092lwjh.cloudfront.net/creators/010e03c6-f9f8-4317-bf1a-a030df64657a/l.mp4",
+      posterSrc: "https://dpbavq092lwjh.cloudfront.net/creators/010e03c6-f9f8-4317-bf1a-a030df64657a/l.png",
+      userName: "John Doe"
+    },
+    {
+      videoSrc: "https://dpbavq092lwjh.cloudfront.net/creators/010e03c6-f9f8-4317-bf1a-a030df64657a/l.mp4",
+      posterSrc: "https://dpbavq092lwjh.cloudfront.net/creators/010e03c6-f9f8-4317-bf1a-a030df64657a/l.png",
+      userName: "John Doe"
+    },
+    {
+      videoSrc: "https://dpbavq092lwjh.cloudfront.net/creators/010e03c6-f9f8-4317-bf1a-a030df64657a/l.mp4",
+      posterSrc: "https://dpbavq092lwjh.cloudfront.net/creators/010e03c6-f9f8-4317-bf1a-a030df64657a/l.png",
+      userName: "John Doe"
+    },
+    {
+      videoSrc: "https://dpbavq092lwjh.cloudfront.net/creators/010e03c6-f9f8-4317-bf1a-a030df64657a/l.mp4",
+      posterSrc: "https://dpbavq092lwjh.cloudfront.net/creators/010e03c6-f9f8-4317-bf1a-a030df64657a/l.png",
+      userName: "Jane Smith"
+    },
+    {
+        videoSrc: "https://dpbavq092lwjh.cloudfront.net/creators/010e03c6-f9f8-4317-bf1a-a030df64657a/l.mp4",
+        posterSrc: "https://dpbavq092lwjh.cloudfront.net/creators/010e03c6-f9f8-4317-bf1a-a030df64657a/l.png",
+        userName: "Jane Smith"
+      },
+      {
+        videoSrc: "https://dpbavq092lwjh.cloudfront.net/creators/010e03c6-f9f8-4317-bf1a-a030df64657a/l.mp4",
+        posterSrc: "https://dpbavq092lwjh.cloudfront.net/creators/010e03c6-f9f8-4317-bf1a-a030df64657a/l.png",
+        userName: "Jane Smith"
+      },
+      {
+        videoSrc: "https://dpbavq092lwjh.cloudfront.net/creators/010e03c6-f9f8-4317-bf1a-a030df64657a/l.mp4",
+        posterSrc: "https://dpbavq092lwjh.cloudfront.net/creators/010e03c6-f9f8-4317-bf1a-a030df64657a/l.png",
+        userName: "Jane Smith"
+      },
+      {
+        videoSrc: "https://dpbavq092lwjh.cloudfront.net/creators/010e03c6-f9f8-4317-bf1a-a030df64657a/l.mp4",
+        posterSrc: "https://dpbavq092lwjh.cloudfront.net/creators/010e03c6-f9f8-4317-bf1a-a030df64657a/l.png",
+        userName: "Jane Smith"
+      },
+      {
+        videoSrc: "https://dpbavq092lwjh.cloudfront.net/creators/010e03c6-f9f8-4317-bf1a-a030df64657a/l.mp4",
+        posterSrc: "https://dpbavq092lwjh.cloudfront.net/creators/010e03c6-f9f8-4317-bf1a-a030df64657a/l.png",
+        userName: "Jane Smith"
+      },
+      {
+        videoSrc: "https://dpbavq092lwjh.cloudfront.net/creators/010e03c6-f9f8-4317-bf1a-a030df64657a/l.mp4",
+        posterSrc: "https://dpbavq092lwjh.cloudfront.net/creators/010e03c6-f9f8-4317-bf1a-a030df64657a/l.png",
+        userName: "Jane Smith"
+      },
+      {
+        videoSrc: "https://dpbavq092lwjh.cloudfront.net/creators/010e03c6-f9f8-4317-bf1a-a030df64657a/l.mp4",
+        posterSrc: "https://dpbavq092lwjh.cloudfront.net/creators/010e03c6-f9f8-4317-bf1a-a030df64657a/l.png",
+        userName: "Jane Smith"
+      },
+      {
+        videoSrc: "https://dpbavq092lwjh.cloudfront.net/creators/010e03c6-f9f8-4317-bf1a-a030df64657a/l.mp4",
+        posterSrc: "https://dpbavq092lwjh.cloudfront.net/creators/010e03c6-f9f8-4317-bf1a-a030df64657a/l.png",
+        userName: "Jane Smith"
+      },
+   
+  ];

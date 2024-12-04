@@ -33,7 +33,7 @@ const Details = () => {
                 <ArrowBk />
               </div>
               <p className="font-normal text-[#9B9C9E] text-sm font-sans">
-                M Umar Farooq's Workspace
+                Demo User Workspace
               </p>
             </button>
             <div className="mt-4 line-clamp-1 font-bold text-3xl">vnvn</div>

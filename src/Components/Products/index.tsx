@@ -18,7 +18,7 @@ const Products = () => {
                     data-slot="text"
                     className="font-medium text-[#9B9C9E] text-base font-sans"
                   >
-                    M Umar Farooq's Workspace
+                   Demo User Workspace
                   </p>
                   <p
                     data-slot="text"

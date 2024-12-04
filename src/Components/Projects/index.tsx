@@ -67,13 +67,12 @@ const Projects = () => {
       <div className="no-scrollbar relative h-full flex-col overflow-y-auto rounded-2xl bg-white/5">
         <div className="page-in h-full text-white p-5">
           <p className="font-normal text-[#9B9C9E] text-sm font-sans">
-            M Umar Farooq's Workspace
+          Demo User Workspace
           </p>
           <p className="text-white mt-2.5 font-bold text-3xl font-sans">
             My Projects
           </p>
 
-          {/* Search and New Project */}
           <div className="mt-6 flex items-center gap-2">
             <div className="flex h-10 w-full items-center gap-2.5">
               <div className="h-full flex-1 flex items-center gap-2.5 rounded-lg border border-white/5 bg-white/5">
@@ -199,6 +198,7 @@ const Projects = () => {
                         thumbnailUrl="https://dpbavq092lwjh.cloudfront.net/amzptv/b23a7c52-8708-46b9-886d-8db5927cbc0b-1733003670/thumbnail.jpg"
                         title="Sample Video Title"
                         editedDate="Dec 1, 2024"
+                      
                       />
                     </div>
                   )}

@@ -76,10 +76,10 @@ const Layout = ({ children }: any) => {
                 </div>
                 <div className="ml-3 flex-grow flex-col gap-1 hidden lg:block md:pr-4">
                   <p className="text-white font-bold text-sm leading-4 font-sans">
-                    M Umar Farooq
+                  Demo User
                   </p>
                   <p className="text-white max-w-[140px] truncate font-normal text-xs opacity-50 font-sans">
-                    umarfarooqjani61@gmail.com
+                    demouser@gmail.com
                   </p>
                 </div>
               </div>

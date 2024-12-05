@@ -12,29 +12,30 @@ import {
   DiscourtIcon,
   LogoSm,
 } from "../utils/SvgIcons";
+import ProfileModel from "./ProfileModel";
 
 const menuItems = [
   {
     id: 1,
-    href: "",
+    href: "/",
     icon: <CreateIcon />,
     label: "Create",
   },
   {
     id: 2,
-    href: "",
+    href: "/projects",
     icon: <ProjectsIcon />,
     label: "Projects",
   },
   {
     id: 3,
-    href: "",
+    href: "/products",
     icon: <ProductIcon />,
     label: "Products",
   },
   {
     id: 4,
-    href: "",
+    href: "/custom-avatars",
     icon: <CoustomAV />,
     label: "Custom Avatars",
     isNew: true,
@@ -43,6 +44,15 @@ const menuItems = [
 
 const Layout = ({ children }: any) => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleOpenModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
 
   const handleClick = (id: number) => {
     setActiveIndex(id);
@@ -57,7 +67,7 @@ const Layout = ({ children }: any) => {
       >
         <a
           className="mt-[10px] h-16 flex items-center justify-center rounded-xl p-5 cursor-pointer"
-          href="/home"
+          href="/"
         >
           <img className="hidden lg:block" src="/assets/new_logo.webp"  alt="creatify logo" width="250px" />
 
@@ -84,9 +94,10 @@ const Layout = ({ children }: any) => {
                 </div>
               </div>
             </div>
-            <div className=" h-full hidden lg:flex items-center justify-center">
+            <div  onClick={handleOpenModal} className=" h-full hidden lg:flex items-center justify-center">
               <ThreeDotsIcon />
             </div>
+           < ProfileModel   isOpen={isModalOpen} onClose={handleCloseModal}/>
           </div>
         </div>
 

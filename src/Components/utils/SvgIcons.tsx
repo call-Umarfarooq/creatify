@@ -667,3 +667,161 @@ export const Crossicon =() =>(
   <path d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94 5.28 4.22Z" />
 </svg>
 )
+
+export const DashboardIn =()=>(
+  <svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="20"
+  height="20"
+  viewBox="0 0 24 24"
+>
+  <g
+    fill="none"
+    stroke="currentColor"
+    stroke-width="3"
+    opacity=".75"
+  >
+    <path d="M2.294 9.733A1 1 0 013.266 8.5H20.73a1 1 0 01.973 1.233l-2.52 10.5a1 1 0 01-.973.767H5.786a1 1 0 01-.972-.767z"></path>
+    <path d="M9.5 3.5h-4v5h4zm0 5L12.75 4 19 8.5m-11.5 4h4"></path>
+  </g>
+</svg>
+)
+
+export const CreaditIcn =()=>(
+  <svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="20"
+  height="20"
+  viewBox="0 0 24 24"
+>
+  <g
+    fill="none"
+    stroke="currentColor"
+    stroke-width="3"
+    opacity=".75"
+  >
+    <path d="M4.422 4.803v3.03h3.03"></path>
+    <path d="M3.668 12a8.333 8.333 0 101.115-4.168"></path>
+    <path d="M12 7v5.004l3.533 3.533"></path>
+  </g>
+</svg>
+)
+
+export const SettinIn =()=> (
+  <svg
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <g opacity="0.75">
+    <path
+      d="M19.2915 6.16663H16.7915"
+      stroke="white"
+      strokeWidth="1.5"
+    ></path>
+    <path
+      d="M13.4585 4.5V7.83333"
+      stroke="white"
+      strokeWidth="1.5"
+    ></path>
+    <path
+      d="M13.4582 6.16663H4.2915"
+      stroke="white"
+      strokeWidth="1.5"
+    ></path>
+    <path
+      d="M7.62484 12H4.2915"
+      stroke="white"
+      strokeWidth="1.5"
+    ></path>
+    <path
+      d="M10.9585 10.3334V13.6667"
+      stroke="white"
+      strokeWidth="1.5"
+    ></path>
+    <path
+      d="M20.1252 12H10.9585"
+      stroke="white"
+      strokeWidth="1.5"
+    ></path>
+    <path
+      d="M19.2915 17.8334H16.7915"
+      stroke="white"
+      strokeWidth="1.5"
+    ></path>
+    <path
+      d="M13.4585 16.1666V19.5"
+      stroke="white"
+      strokeWidth="1.5"
+    ></path>
+    <path
+      d="M13.4582 17.8334H4.2915"
+      stroke="white"
+      strokeWidth="1.5"
+    ></path>
+  </g>
+</svg>
+)
+
+
+export const SubIcn = ()=> (
+  <svg
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <g opacity="0.75">
+    <path
+      d="M5.3335 20.3333V4.49996C5.3335 4.03972 5.70659 3.66663 6.16683 3.66663H17.8335C18.2937 3.66663 18.6668 4.03972 18.6668 4.49996V20.3333L12.0002 16.8863L5.3335 20.3333Z"
+      stroke="white"
+      strokeWidth="1.5"
+    ></path>
+    <path
+      d="M11.979 7.81238V12.8124"
+      stroke="white"
+      strokeWidth="1.5"
+    ></path>
+    <path
+      d="M9.479 10.3124H14.479"
+      stroke="white"
+      strokeWidth="1.5"
+    ></path>
+  </g>
+</svg>
+)
+
+export const HIcon =()=> (
+  <svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 16 16"
+  fill="currentColor"
+  aria-hidden="true"
+  data-slot="icon"
+>
+  <path
+    fillRule="evenodd"
+    d="M12.416 3.376a.75.75 0 0 1 .208 1.04l-5 7.5a.75.75 0 0 1-1.154.114l-3-3a.75.75 0 0 1 1.06-1.06l2.353 2.353 4.493-6.74a.75.75 0 0 1 1.04-.207Z"
+    clipRule="evenodd"
+  ></path>
+</svg>
+)
+
+export const LogoutIcon = () => (
+  <svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 16 16"
+  fill="currentColor"
+  aria-hidden="true"
+  data-slot="icon"
+>
+  <path
+    fillRule="evenodd"
+    d="M2 4.75A2.75 2.75 0 0 1 4.75 2h3a2.75 2.75 0 0 1 2.75 2.75v.5a.75.75 0 0 1-1.5 0v-.5c0-.69-.56-1.25-1.25-1.25h-3c-.69 0-1.25.56-1.25 1.25v6.5c0 .69.56 1.25 1.25 1.25h3c.69 0 1.25-.56 1.25-1.25v-.5a.75.75 0 0 1 1.5 0v.5A2.75 2.75 0 0 1 7.75 14h-3A2.75 2.75 0 0 1 2 11.25v-6.5Zm9.47.47a.75.75 0 0 1 1.06 0l2.25 2.25a.75.75 0 0 1 0 1.06l-2.25 2.25a.75.75 0 1 1-1.06-1.06l.97-.97H5.25a.75.75 0 0 1 0-1.5h7.19l-.97-.97a.75.75 0 0 1 0-1.06Z"
+    clipRule="evenodd"
+  ></path>
+</svg>
+)

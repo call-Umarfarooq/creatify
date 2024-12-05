@@ -1,5 +1,6 @@
 import React from "react";
 import { ThreeDotIonP } from "../utils/SvgIcons";
+import Link from "next/link";
 
 interface ProjectCardProps {
   videoUrl: string;
@@ -17,7 +18,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   onOptionsClick,
 }) => {
   return (
-    <div className="w-full relative group">
+    <Link href={"/projects/detail"} className="w-full relative group">
       <div className="group relative">
         <span
           data-slot="control"
@@ -91,7 +92,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       <div className="absolute border-[2px] border-[#6c6cf5] flex top-0 left-0 z-10 h-full w-full flex-col items-center gap-y-2 rounded-2xl  opacity-0 group-hover:opacity-100 transition-opacity duration-300">
      
       </div>
-    </div>
+    </Link>
   );
 };
 

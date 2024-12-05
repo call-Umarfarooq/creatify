@@ -140,3 +140,12 @@ body {
 .bg-black\/20 {
   background-color: rgba(0, 0, 0, .2);
 }
+
+.bg-area-platform, .bg-area-platform\/\[0\.04\] {
+  background-color: hsla(0, 0%, 100%, .04);
+}
+
+.truncate {
+  overflow: hidden;
+  white-space: nowrap;
+}

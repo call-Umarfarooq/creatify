@@ -4,6 +4,7 @@ import Image from "next/image";
 import CreateNowCart from "../Elements/CreateNowCart";
 import { Arrow, Feature } from "../utils/SvgIcons";
 import FeatureCard from "../Elements/FeatureCard";
+import NavBar from "../Elements/NavBar";
 
 const Home = () => {
   const handleClick = () => {
@@ -11,7 +12,11 @@ const Home = () => {
   };
 
   return (
+
+    <>
+        {/* < NavBar/> */}
     <Layout>
+   
       <main>
         <div className="relative h-full w-full">
           <div className="no-scrollbar h-full w-full rounded-2xl p-6">
@@ -84,6 +89,7 @@ const Home = () => {
         </div>
       </main>
     </Layout>
+    </>
   );
 };
 

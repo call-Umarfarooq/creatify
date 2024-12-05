@@ -14,6 +14,7 @@ import {
 } from "../utils/SvgIcons";
 import ProfileModel from "./ProfileModel";
 import SubscriptionModel from "./SubscriptionModel";
+import NavBar from "./NavBar";
 
 const menuItems = [
   {
@@ -71,7 +72,7 @@ const Layout = ({ children }: any) => {
     <>
       <aside
         id="logo-sidebar"
-        className="fixed rounded-lg top-0 m-6 left-0 side-color z-40 w-[100px] lg:w-[310px] h-[93vh] transition-transform sm:translate-x-0"
+        className="fixed hidden sm:block rounded-lg top-0 m-6 left-0 side-color z-40 w-[100px] lg:w-[310px] h-[93vh] transition-transform sm:translate-x-0"
         aria-label="Sidebar"
       >
         <a
@@ -187,10 +188,16 @@ const Layout = ({ children }: any) => {
         </div>
       </aside>
 
-      <div className="lg:ml-[360px] ml-[150px]">
+      <div className="lg:ml-[360px] ml-[150px] hidden sm:block">
         <div className="mr-6 rounded-lg my-6 side-color">
           <div>{children}</div>
         </div>
+      </div>
+
+
+      <div className="w-[95%] ">
+        <div> < NavBar/></div>
+        <div>{children}</div>
       </div>
     </>
   );

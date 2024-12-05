@@ -1,6 +1,7 @@
 "use client";
 import React, { useRef, useState } from "react";
 import Layout from "../Elements/Layout";
+import NavBar from "../Elements/NavBar";
 
 const ProductDetails = () => {
   const [text, setText] = useState("");
@@ -29,6 +30,7 @@ const ProductDetails = () => {
   };
   return (
     <Layout>
+    
       <div className="no-scrollbar h-full flex-col overflow-y-auto rounded-2xl bg-white/[0.05]">
         <div className="page-in h-full text-white p-10">
           <div className="h-full flex-col rounded-2xl 2xl:bg-transparent">

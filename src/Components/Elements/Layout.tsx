@@ -13,6 +13,7 @@ import {
   LogoSm,
 } from "../utils/SvgIcons";
 import ProfileModel from "./ProfileModel";
+import SubscriptionModel from "./SubscriptionModel";
 
 const menuItems = [
   {
@@ -45,7 +46,15 @@ const menuItems = [
 const Layout = ({ children }: any) => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isModalOpen1, setIsModalOpen1] = useState(false);
 
+  const handleOpenModal1 = () => {
+    setIsModalOpen1(true);
+  };
+
+  const handleCloseModal1 = () => {
+    setIsModalOpen1(false);
+  };
   const handleOpenModal = () => {
     setIsModalOpen(true);
   };
@@ -143,7 +152,7 @@ const Layout = ({ children }: any) => {
           </p>
         </Link>
         <div className="mx-4 absolute flex gap-6 mt-4">
-          <div className="flex h-[48px] cursor-pointer items-center justify-between rounded-lg border-2 border-[#5C54FF] border-solid bg-[#5C54FF]/[0.2] px-3 text-sm text-white hover:bg-[#5C54FF]/[0.1]">
+          <div onClick={handleOpenModal1} className="flex h-[48px] cursor-pointer items-center justify-between rounded-lg border-2 border-[#5C54FF] border-solid bg-[#5C54FF]/[0.2] px-3 text-sm text-white hover:bg-[#5C54FF]/[0.1]">
             <div className="flex items-center pr-2 h-[46px] w-fit rounded-lg">
               <div
                 className="flex-center "
@@ -163,6 +172,9 @@ const Layout = ({ children }: any) => {
               Upgrade
             </div>
           </div>
+          <SubscriptionModel isOpen={isModalOpen1} onClose={handleCloseModal1}>
+            <div></div>
+          </SubscriptionModel>
           <Link
             target="_blank"
             href="https://discord.gg/VjMAuueteM"

@@ -1,6 +1,7 @@
 import React from "react";
 import Modal from "react-modal";
 import { CreaditIcn, DashboardIn, HIcon, LogoutIcon, SettinIn, SubIcn } from "../utils/SvgIcons";
+import Link from "next/link";
 
 const customStyles = {
   content: {
@@ -26,10 +27,10 @@ interface IModalProps {
 }
 
 const menuItems = [
-  { icon: <DashboardIn />, label: "Dashboard" },
-  { icon: <CreaditIcn />, label: "Credits history" },
-  { icon: <SettinIn />, label: "Workspace Settings" },
-  { icon: <SubIcn />, label: "Subscription" },
+  { icon: <DashboardIn />, label: "Dashboard", href:"" },
+  { icon: <CreaditIcn />, label: "Credits history", href:"" },
+  { icon: <SettinIn />, label: "Workspace Settings" , href:""},
+  { icon: <SubIcn />, label: "Subscription", href:"/subscription" },
 ];
 
 const workspaceItems = [
@@ -56,7 +57,7 @@ function ProfileModel({ isOpen, onClose }: IModalProps) {
         {/* Menu Items */}
         <div className="space-y-4">
           {menuItems.map((item, index) => (
-            <div
+            <Link href={`${item.href}`}
               key={index}
               className="flex h-10 w-full items-center p-2 text-sm text-white hover:cursor-pointer hover:rounded-lg hover:bg-white/5"
             >
@@ -64,7 +65,7 @@ function ProfileModel({ isOpen, onClose }: IModalProps) {
                 {item.icon}
               </div>
               <div className="flex-1 pl-2 text-left">{item.label}</div>
-            </div>
+            </Link>
           ))}
         </div>
 

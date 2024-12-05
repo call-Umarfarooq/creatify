@@ -1,5 +1,6 @@
 import React from "react";
 import { ThreeDot } from "../utils/SvgIcons";
+import Link from "next/link";
 
 interface ProductCardProps {
   imageSrc: string;
@@ -83,7 +84,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
           data-loading="false"
           className="inline-flex items-center justify-center whitespace-nowrap gap-2.5 border border-current hover:text-white/[0.5] active:text-white/[0.3] :border-white/[0.24] disabled:text-white/[0.24] h-12 rounded-2xl px-5 w-32"
         >
-          <div>Manage assets</div>
+          <Link href={'products/detail'} >Manage assets</Link>
         </button>
       </div>
     </div>

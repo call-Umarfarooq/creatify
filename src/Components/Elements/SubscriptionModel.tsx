@@ -95,6 +95,7 @@ const SubscriptionModel = ({ isOpen, children, onClose }: IModalProps) => {
           </div>
         </div>
         <button
+        onClick={onClose}
           data-loading="false"
           className="inline-flex items-center justify-center whitespace-nowrap gap-2.5 select-none text-label-md transition-opacity ease-out focus-visible:outline-none focus-visible:shadow-focus disabled:cursor-not-allowed data-[loading=true]:cursor-progress bg-transparent text-color-support hover:bg-ux-hover active:bg-ux-press data-[loading=true]:bg-transparent disabled:bg-transparent disabled:text-color-disable rounded-2xl p-0 h-10 w-10"
         >

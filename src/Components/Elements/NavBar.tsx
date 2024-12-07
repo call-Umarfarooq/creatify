@@ -1,11 +1,20 @@
 import Link from 'next/link'
-import React from 'react'
+import React, { useState } from 'react'
 
-const NavBar = () => {
+const NavBar = ({setToggal}:any) => {
+const [toggalValue , setToggaleValue]= useState(false)
+ 
+const HandleTogle =()=>{
+  setToggaleValue((prevValue)=> !prevValue)
+  setToggal(toggalValue)
+}
+
+
+
   return (
-    <div className=" flex m-4 box-border w-[100%] flex-row items-center justify-between rounded-xl bg-white/10 p-4 backdrop-blur-sm">
+    <div className=" flex m-4 box-border  flex-row items-center justify-between rounded-xl bg-white/10 p-4 backdrop-blur-sm">
       {/* Menu Icon */}
-      <div className=" cursor-pointer">
+      <div onClick={HandleTogle} className=" cursor-pointer">
         <div className="flex-center" style={{ color: "white" }}>
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" d="M4 12h16M4 18h16M4 6h16"></path></svg>
         </div>

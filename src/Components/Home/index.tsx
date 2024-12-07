@@ -19,7 +19,7 @@ const Home = () => {
    
       <main>
         <div className="relative h-full w-full">
-          <div className="no-scrollbar h-full w-full rounded-2xl p-6">
+          <div className="no-scrollbar h-full w-full rounded-2xl p-4 sm:p-6">
             <div className="no-scrollbar  h-full w-full  overflow-y-auto rounded-2xl">
               <p
                 data-slot="text"

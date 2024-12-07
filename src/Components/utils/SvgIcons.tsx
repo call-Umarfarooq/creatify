@@ -407,6 +407,7 @@ export const Uploadicon = () => (
     strokeWidth={1.5}
     stroke="currentColor"
     aria-hidden="true"
+    className="h-[16px] w-[16px]"
     data-slot="icon"
   >
     <path

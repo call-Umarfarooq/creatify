@@ -16,6 +16,7 @@ import FeatureCard from "../Elements/FeatureCard";
 const Projects = () => {
   const [selectedFilter, setSelectedFilter] = useState(0);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [ischeck, setIscheck] = useState(false)
 
   const handleFilterChange = (filter: any) => {
     setSelectedFilter(filter);
@@ -181,7 +182,7 @@ const Projects = () => {
             </div>
           </div>
 
-          <CheckBoxWIthUploadDelete />
+          <CheckBoxWIthUploadDelete setIscheck={setIscheck} />
           <div className=" h-[calc(100%-300px)] overflow-y-auto">
             <div className="infinite-scroll-component__outerdiv ">
               <div
@@ -194,6 +195,7 @@ const Projects = () => {
                   ) : (
                     <div className="grid w-full auto-rows-auto grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5">
                       <ProjectCard
+                      ischeck={ischeck}
                         videoUrl="https://example.com/video.mp4"
                         thumbnailUrl="https://dpbavq092lwjh.cloudfront.net/amzptv/b23a7c52-8708-46b9-886d-8db5927cbc0b-1733003670/thumbnail.jpg"
                         title="Sample Video Title"

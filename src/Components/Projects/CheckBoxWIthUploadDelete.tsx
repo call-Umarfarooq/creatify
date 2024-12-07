@@ -1,10 +1,13 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { DeleteIcon2, Uploadicon } from "../utils/SvgIcons";
 
-const CheckBoxWIthUploadDelete = () => {
+const CheckBoxWIthUploadDelete = ({setIscheck}:any) => {
   const [isChecked, setIsChecked] = useState(false);
 
+useEffect( ()=> {
+  setIscheck(isChecked)
+},[isChecked])
   return (
     <div className="mt-6 no-scrollbar flex h-[44px] items-center justify-between">
       <div className="flex cursor-pointer items-center gap-3 font-medium text-base">
@@ -53,6 +56,8 @@ const CheckBoxWIthUploadDelete = () => {
         </span>
         Total 2 videos
       </div>
+
+      {isChecked && 
       <div className="flex gap-4">
         <button
           data-tooltip-id="tooltip"
@@ -93,7 +98,7 @@ const CheckBoxWIthUploadDelete = () => {
           <DeleteIcon2 />
           <span className="-translate-x-1/2 -translate-y-1/2 absolute top-1/2 left-1/2 size-[max(100%,2.75rem)] [@media(pointer:fine)]:hidden" />
         </button>
-      </div>
+      </div>}
     </div>
   );
 };

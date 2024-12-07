@@ -8,6 +8,7 @@ interface ProjectCardProps {
   title: string;
   editedDate: string;
   onOptionsClick?: () => void;
+  ischeck?:any
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
@@ -16,6 +17,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   title,
   editedDate,
   onOptionsClick,
+  ischeck
 }) => {
   const [isChecked, setIsChecked] = useState(false);
 
@@ -24,12 +26,12 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       <div className="group relative">
         <span
           data-slot="control"
-          className="group-hover:visible invisible absolute top-2 left-2 z-30 group inline-flex focus:outline-none"
+          className={`group-hover:visible ${(isChecked || ischeck )? 'visible':'invisible '} absolute top-2 left-2 z-30 group inline-flex focus:outline-none `}
           role="checkbox"
         >
           <div
             className={`relative isolate flex items-center justify-center rounded-[0.3125rem] border border-white/85 border-solid w-6 h-6 ${
-              isChecked ? "bg-[#6c6cf5]" : "bg-transparent"
+              (isChecked || ischeck) ? "bg-[#6c6cf5]" : "bg-transparent"
             }`}
             onClick={(e) => {
               e.preventDefault(); // Prevent the link click
@@ -37,7 +39,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             }}
           >
             {/* Checkmark Icon */}
-            {isChecked && (
+            {(isChecked || ischeck) && (
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -54,7 +56,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             )}
           </div>
         </span>
-        <div className="absolute border-[2px] border-[#6c6cf5] flex top-0 left-0 z-10 h-full w-full flex-col items-center gap-y-2 rounded-2xl  opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        <div className={`absolute border-[2px] border-[#6c6cf5] flex top-0 left-0 z-10 h-full w-full flex-col items-center gap-y-2 rounded-2xl ${(isChecked || ischeck )? 'opacity-100':''} opacity-0 group-hover:opacity-100 transition-opacity duration-300`}></div>
         <div className="flex-col hover:shadow-focus-md fade-in animate-in cursor-pointer overflow-hidden rounded-2xl bg-area-container duration-200">
           <div className="relative aspect-[7/4] max-w-full">
             <div className="h-full w-full">

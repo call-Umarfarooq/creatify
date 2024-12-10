@@ -1,135 +1,164 @@
-import React from "react";
-import { useState } from "react";
-import {
-  ThreeDotsIcon,
-  CoustomAV,
-  CreateIcon,
-  ProductIcon,
-  ProjectsIcon,
-  LearningC,
-  IconifyIcon,
-  DiscourtIcon,
-  LogoSm,
-} from "../../Components/utils/SvgIcons";
-import Link from "next/link";
-const Sidebar: React.FC = () => {
-  const menuItems = [
-    {
-      id: 1,
-      href: "/",
-      icon: <CreateIcon />,
-      label: "Create",
-    },
-    {
-      id: 2,
-      href: "/projects",
-      icon: <ProjectsIcon />,
-      label: "Projects",
-    },
-    {
-      id: 3,
-      href: "/products",
-      icon: <ProductIcon />,
-      label: "Products",
-    },
-    {
-      id: 4,
-      href: "/custom-avatars",
-      icon: <CoustomAV />,
-      label: "Custom Avatars",
-      isNew: true,
-    },
-  ];
+"use client";
+
+import React, { FC, useState } from "react";
+
+interface CreditHistoryProps {
+  currentCredits: string;
+  nextRenewal: string;
+  creditsLeft: number;
+  history: {
+    item: string;
+    description: string;
+    credits: number;
+    createdAt: string;
+  }[];
+}
+
+const ITEMS_PER_PAGE = 5;
+
+const CreditHistory: FC<CreditHistoryProps> = ({
+  currentCredits,
+  nextRenewal,
+  creditsLeft,
+  history,
+}) => {
+  const [currentPage, setCurrentPage] = useState<number>(1);
+
+  const totalPages = Math.ceil((history?.length || 0) / ITEMS_PER_PAGE);
+
+  const paginatedHistory = (history || []).slice(
+    (currentPage - 1) * ITEMS_PER_PAGE,
+    currentPage * ITEMS_PER_PAGE
+  );
+
+  const handleNextPage = () => {
+    if (currentPage < totalPages) {
+      setCurrentPage((prevPage) => prevPage + 1);
+    }
+  };
+
+  const handlePrevPage = () => {
+    if (currentPage > 1) {
+      setCurrentPage((prevPage) => prevPage - 1);
+    }
+  };
+
   return (
-    <div className="fixed inset-0 overflow-hidden">
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="pointer-events-none fixed inset-y-0 flex max-w-full left-0">
-          <div
-            className="pointer-events-auto max-w-md bg-[#111315]  transform transition duration-100 ease-in-out"
-            id="headlessui-dialog-panel"
-            data-headlessui-state="open"
-            style={{ transform: "translateX(0)" }}
-          >
-            <div className="flex h-full flex-col overflow-y-scroll bg-white/[0.05] shadow-xl">
-              <div className="w-[310px]  max-w-[310px] flex-grow flex-col justify-between gap-4  backdrop-blur-sm transition-all duration-300 ease-in-out">
-                <a
-                  className="mt-[10px] h-16 flex items-center justify-center rounded-xl p-5 cursor-pointer"
-                  href="/"
-                >
-                  <img
-                    className=""
-                    src="/assets/new_logo.webp"
-                    alt="creatify logo"
-                    width="250px"
-                  />
-                </a>
-                <div className="px-2 flex-none mx-4 my-2 overflow-hidden rounded-xl bg-white/[0.05] py-3">
-                  {menuItems.map((item) => (
-                    <div
-                      key={item.id}
-                      className={`h-full w-full py-4 flex-row-items-center flex px-4 ${"bg-white/[0.05] rounded-lg h-[48px] flex-row items-center"}`}
-                    >
-                      <Link
-                        href={item.href}
-                        className="h-full hover:opacity-70 w-full flex-row items-center flex"
-                      >
-                        {item.icon}
-                        <p className="font-normal  sm:hidden lg:block ml-2 truncate text-nowrap text-white font-sans">
-                          {item.label}
-                        </p>
-                      </Link>
-                      {item.isNew && (
-                        <div className="flex items-center pr-4">
-                          <div className="flex-center rounded-full bg-area-container px-2 py-0.5 text-white/90 text-xs bg-gradient-to-br from-[#4868d5] to-[#bd4cc2] italic font-extrabold">
-                            NEW
-                          </div>
-                        </div>
-                      )}
-                    </div>
-                  ))}
-                </div>
-
-                <div className="mx-4 h-[29%] flex gap-6 justify-end items-end mt-4">
-                  <div className="flex h-[48px] cursor-pointer items-center justify-between rounded-lg border-2 border-[#5C54FF] border-solid bg-[#5C54FF]/[0.2] px-3 text-sm text-white hover:bg-[#5C54FF]/[0.1]">
-                    <div className="flex items-center pr-2 h-[46px] w-fit rounded-lg">
-                      <div
-                        className="flex-center "
-                        style={{ color: "rgb(255, 255, 255)" }}
-                      >
-                        <IconifyIcon />
-                      </div>
-                      <p
-                        data-slot="text"
-                        className="font-normal  text-white ml-1 truncate text-nowrap font-sans"
-                      >
-                        10 credits
-                      </p>
-                    </div>
-                    <div className="mx-1  h-4 w-[1px] bg-white/20"></div>
-                    <div className="cursor-pointer  rounded-lg p-2 font-bold hover:bg-[#5C54FF]/40">
-                      Upgrade
-                    </div>
-                  </div>
-
-                  <Link
-                    target="_blank"
-                    href="https://discord.gg/VjMAuueteM"
-                    rel="noopener noreferrer"
-                  >
-                    <div className="flex h-[46px]  w-[46px] items-center justify-center overflow-hidden rounded-lg bg-white/[0.04]">
-                      <DiscourtIcon />
-                    </div>
-                  </Link>
-                </div>
-              </div>
-
-              {/* Bottom Buttons */}
+    <div
+      role="dialog"
+      id="credits-dialog"
+      aria-labelledby="dialog-title"
+      aria-describedby="dialog-description"
+      className="fixed top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] z-[1200] w-full max-w-5xl bg-bg-2 p-8 rounded-lg"
+      style={{ pointerEvents: "auto" }}
+    >
+      <h2 id="dialog-title" className="font-semibold text-lg leading-none tracking-tight">
+        Credits History
+      </h2>
+      <div className="mt-5 flex flex-col gap-5">
+        {/* Current Credits Section */}
+        <div className="flex items-center rounded-lg bg-white/5 p-4">
+          <div className="flex flex-1 items-center">
+            <div className="flex items-center gap-1">
+              <p className="font-normal text-[12px] leading-[16px] text-white/60">Current credits:</p>
+              <p className="font-normal text-white text-[12px] leading-[16px]">{currentCredits}</p>
+            </div>
+            <div className="mx-4 h-[18px] w-[1px] bg-white/15"></div>
+            <div className="flex items-center gap-1">
+              <p className="font-normal text-[12px] leading-[16px] text-white/60">Next renewal:</p>
+              <p className="font-normal text-white text-[12px] leading-[16px]">{nextRenewal}</p>
+            </div>
+            <div className="mx-4 h-[18px] w-[1px] bg-white/15"></div>
+            <div className="flex items-center gap-1">
+              <p className="font-normal text-[12px] leading-[16px] text-white/60">Credits left:</p>
+              <p className="font-normal text-white text-[12px] leading-[16px]">{creditsLeft}</p>
             </div>
           </div>
+          <button
+            className="bg-[#5D54FF] text-white rounded-full px-4 py-2 hover:bg-[#7D76FF]"
+            type="button"
+          >
+            Upgrade
+          </button>
+        </div>
+
+        {/* Table Section */}
+        <div className="h-[428px] overflow-y-auto rounded-lg border border-white/20">
+          <table className="min-w-full text-left text-sm">
+            <thead className="text-zinc-500">
+              <tr>
+                <th className="px-4 py-2 font-medium">Item</th>
+                <th className="px-4 py-2 font-medium">Description</th>
+                <th className="px-4 py-2 font-medium">Credits</th>
+                <th className="px-4 py-2 font-medium">Created At</th>
+              </tr>
+            </thead>
+            <tbody>
+              {paginatedHistory.map((entry) => (
+                <tr key={entry.createdAt} className="border-b border-white">
+                  <td className="px-4 py-4">{entry.item}</td>
+                  <td className="px-4 py-4">{entry.description}</td>
+                  <td className="px-4 py-4">{entry.credits}</td>
+                  <td className="px-4 py-4">{entry.createdAt}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        {/* Pagination Controls */}
+        <div className="flex justify-between items-center">
+          <button
+            className="bg-white/10 text-white rounded-lg px-4 py-2"
+            onClick={handlePrevPage}
+            disabled={currentPage === 1}
+          >
+            &lt; Back
+          </button>
+          <button
+            className="bg-white/10 text-white rounded-lg px-4 py-2"
+            onClick={handleNextPage}
+            disabled={currentPage === totalPages}
+          >
+            Next &gt;
+          </button>
         </div>
       </div>
     </div>
   );
 };
 
-export default Sidebar;
+export default CreditHistory;
+
+export const CreditHistoryPage: React.FC = () => {
+  const currentCredits = "50";
+  const nextRenewal = "2024-12-31";
+  const creditsLeft = 20;
+  const history = [
+    {
+      item: "Pro Plan",
+      description: "Monthly subscription",
+      credits: 30,
+      createdAt: "2024-11-01",
+    },
+    {
+      item: "Addon Pack",
+      description: "Purchased extra credits",
+      credits: 20,
+      createdAt: "2024-11-15",
+    },
+    // Add more history items here
+  ];
+
+  return (
+    <div>
+      <h1>My Credits</h1>
+      <CreditHistory
+        currentCredits={currentCredits}
+        nextRenewal={nextRenewal}
+        creditsLeft={creditsLeft}
+        history={history}
+      />
+    </div>
+  );
+};

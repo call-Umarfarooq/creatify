@@ -188,6 +188,9 @@ body {
   background-color: hsla(0, 0%, 100%, .08);
 }
 
+.bg-area-container2:hover {
+  background-color: hsla(0, 0%, 100%, .08);
+}
 .bg-area-container {
   background-color: hsla(0, 0%, 100%, .08);
 }
@@ -198,4 +201,25 @@ body {
 
 .bg-area-container-purple:hover {
   background-color: rgba(108, 108, 245, .12);
+}
+
+
+.transition-colors {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(.4,0,.2,1);
+  transition-duration: .15s;
+}
+
+.text-color-title {
+  color: hsla(0, 0%, 100%, .9);
+}
+
+.text-body-md {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+.text-color-title {
+  color: hsla(0, 0%, 100%, .9);
 }

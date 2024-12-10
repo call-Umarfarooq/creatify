@@ -217,9 +217,7 @@ const EditProduct = () => {
 
                   <div
                     className={`flex-col mb-5 mt-3  mb gap-6 bg-area-container1  transition-all  ${
-                      isPromoEnabled
-                        ? "py-4 rounded-2xl "
-                        : "p-4  rounded-2xl "
+                      isPromoEnabled ? "py-4 rounded-2xl " : "p-4  rounded-2xl "
                     }`}
                   >
                     {/* Toggle Switch */}
@@ -330,25 +328,24 @@ const EditProduct = () => {
                   </div>
 
                   <div className="flex h-20 w-full flex-none items-center justify-center gap-4">
-      <button
-        data-loading="false"
-        className="inline-flex items-center justify-center whitespace-nowrap gap-2.5 select-none text-label-md text-color-title transition-opacity ease-out focus-visible:outline-none focus-visible:shadow-focus disabled:cursor-not-allowed data-[loading=true]:cursor-progress disabled:text-color-disable bg-area-container hover:bg-ux-hover active:bg-ux-press data-[loading=true]:bg-area-container disabled:bg-area-container h-10 rounded-xl px-3 w-[108px]"
-      >
-        <div>Back</div>
-      </button>
-      <button
-        data-loading="false"
-        className="inline-flex items-center justify-center whitespace-nowrap gap-2.5 select-none text-label-md text-color-title transition-opacity ease-out focus-visible:outline-none focus-visible:shadow-focus disabled:cursor-not-allowed data-[loading=true]:cursor-progress disabled:text-color-disable bg-brand hover:bg-ux-brand-hover active:bg-ux-brand-press data-[loading=true]:bg-ux-brand-disable disabled:bg-ux-brand-disable h-10 rounded-xl px-3 w-[108px]"
-      >
-        <div>Next</div>
-      </button>
-    </div>
+                    <button
+                      data-loading="false"
+                      className="inline-flex items-center justify-center whitespace-nowrap gap-2.5 select-none text-label-md text-color-title transition-opacity ease-out focus-visible:outline-none focus-visible:shadow-focus disabled:cursor-not-allowed data-[loading=true]:cursor-progress disabled:text-color-disable bg-area-container hover:bg-ux-hover active:bg-ux-press data-[loading=true]:bg-area-container disabled:bg-area-container h-10 rounded-xl px-3 w-[108px]"
+                    >
+                      <div>Back</div>
+                    </button>
+                    <button
+                      data-loading="false"
+                      className="inline-flex items-center justify-center whitespace-nowrap gap-2.5 select-none text-label-md text-color-title transition-opacity ease-out focus-visible:outline-none focus-visible:shadow-focus disabled:cursor-not-allowed data-[loading=true]:cursor-progress disabled:text-color-disable bg-brand hover:bg-ux-brand-hover active:bg-ux-brand-press data-[loading=true]:bg-ux-brand-disable disabled:bg-ux-brand-disable h-10 rounded-xl px-3 w-[108px]"
+                    >
+                      <div>Next</div>
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        
       </div>
     </div>
   );

@@ -27,14 +27,14 @@ interface IModalProps {
 }
 
 const menuItems = [
-  { icon: <DashboardIn />, label: "Dashboard", href:"" },
+  { icon: <DashboardIn />, label: "Dashboard", href:"/" },
   { icon: <CreaditIcn />, label: "Credits history", href:"" },
   { icon: <SettinIn />, label: "Workspace Settings" , href:""},
   { icon: <SubIcn />, label: "Subscription", href:"/subscription" },
 ];
 
 const workspaceItems = [
-  { icon: <HIcon />, label: "Demo User's  Workspace" },
+  { icon: <HIcon />, label: "Demo User's  Workspace",href:"/projects"}
 ];
 
 function ProfileModel({ isOpen, onClose }: IModalProps) {
@@ -43,7 +43,7 @@ function ProfileModel({ isOpen, onClose }: IModalProps) {
       <div className="p-4">
         {/* Profile Header */}
         <div className="self-start mb-4 text-white/80 text-xs">Demo User</div>
-        <div className="mb-4">
+        <Link href={"/account/settings"} className=" ">
           <div className="flex h-10 w-full items-center p-2 text-sm text-white hover:cursor-pointer hover:rounded-lg hover:bg-white/5">
             <div className="flex h-[24px] w-[24px] items-center justify-center">
               <div className="flex items-center justify-center bg-[#5e2991] text-white h-[24px] w-[24px] rounded-full">
@@ -52,10 +52,10 @@ function ProfileModel({ isOpen, onClose }: IModalProps) {
             </div>
             <div className="flex-1 pl-2 text-left">Demo User</div>
           </div>
-        </div>
+        </Link>
 
         {/* Menu Items */}
-        <div className="space-y-4">
+        <div className="space-y-4 mt-4">
           {menuItems.map((item, index) => (
             <Link href={`${item.href}`}
               key={index}
@@ -77,7 +77,7 @@ function ProfileModel({ isOpen, onClose }: IModalProps) {
           <div className="flex w-full my-3 flex-wrap flex-col gap-[10px]">
             {workspaceItems.map((item, index) => (
               <div key={index} className="relative cursor-pointer hover:opacity-70">
-                <div className="flex h-10 w-full items-center p-2 text-sm text-white hover:cursor-pointer hover:rounded-lg hover:bg-white/5 rounded-lg bg-white/5">
+                <Link  href={item.href} className="flex h-10 w-full items-center p-2 text-sm text-white hover:cursor-pointer hover:rounded-lg hover:bg-white/5 rounded-lg bg-white/5">
                   <div className="flex h-[24px] w-[24px] items-center justify-center">
                     <div className="flex items-center justify-center bg-[#5e2991] text-white h-[24px] w-[24px] rounded-full">
                       <p className="text-white font-bold leading-4 font-sans">M</p>
@@ -87,7 +87,7 @@ function ProfileModel({ isOpen, onClose }: IModalProps) {
                   <div className="justify-center flex h-[24px] w-[24px] items-center">
                     {item.icon}
                   </div>
-                </div>
+                </Link>
               </div>
             ))}
           </div>

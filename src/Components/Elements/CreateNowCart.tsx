@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import { Cap } from "../utils/SvgIcons";
+import Link from "next/link";
 
 const CreateNowCart = ({title,text,url}:any) => {
   return (
@@ -21,7 +22,8 @@ const CreateNowCart = ({title,text,url}:any) => {
               {text}
             </p>
             <div className="flex w-full justify-start md:mt-10 md:mb-0 mt-5 mb-8 gap-4">
-              <button
+            
+              <Link href={'/link-to-video'}
                 color="primary"
                 className="text-white bg-[#5c54ff]  shadow-md  relative  inline-flex items-center justify-center  text-base/6 font-semibold font-sans  sm:text-sm/6 rounded-lg px-6 py-4 h-[44px] w-[137px] cursor-pointer"
                 type="button"
@@ -33,7 +35,8 @@ const CreateNowCart = ({title,text,url}:any) => {
                   className="-translate-x-1/2 -translate-y-1/2 absolute top-1/2 left-1/2 size-[max(100%,2.75rem)] [@media(pointer:fine)]:hidden"
                   aria-hidden="true"
                 />
-              </button>
+              </Link>
+             
               <div className="flex cursor-pointer items-center justify-center rounded-lg bg-[#000]/[.40] h-[44px] w-[44px]">
                <Cap/>
               </div>

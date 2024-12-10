@@ -149,3 +149,45 @@ body {
   overflow: hidden;
   white-space: nowrap;
 }
+.bg2{
+  background: linear-gradient(40deg, #111315, #111315);
+}
+
+
+.gradient-bg1 {
+  border-radius: .25rem;
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+  --tw-gradient-from: #b2b2b228 var(--tw-gradient-from-position);
+  --tw-gradient-to: hsla(0, 0%, 70%, 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  --tw-gradient-to: #83838329 var(--tw-gradient-to-position);
+}
+
+.bg-ux-hover1:hover {
+  background-color: hsla(0, 0%, 100%, .16);
+}
+
+.bg-ux-brand-hover1:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(82 82 229 / var(--tw-bg-opacity));
+}
+
+.bg-ux-purple-hover1:hover {
+  opacity: 1;
+  background-color: rgba(108, 108, 245, .32);
+}
+
+.text-title-h3 {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 700;
+}
+
+
+.bg-area-container1 {
+  background-color: hsla(0, 0%, 100%, .08);
+}
+.bg-area-container {
+  background-color: hsla(0, 0%, 100%, .08);
+}
+

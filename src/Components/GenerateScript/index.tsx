@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import NavTwo from "../Elements/NavTwo";
 import { ImageIcon14, ImageIcon15 } from "../utils/SvgIcons";
+import Link from "next/link";
 
 const GenerateScript = () => {
   const [isAiScript, setIsAiScript] = useState(true);
@@ -100,7 +101,7 @@ const GenerateScript = () => {
                       data-loading="false"
                       className="inline-flex items-center justify-center whitespace-nowrap gap-2.5 select-none text-label-md text-color-title transition-opacity ease-out focus-visible:outline-none focus-visible:shadow-focus disabled:cursor-not-allowed data-[loading=true]:cursor-progress disabled:text-color-disable bg-brand hover:bg-ux-brand-hover active:bg-ux-brand-press data-[loading=true]:bg-ux-brand-disable disabled:bg-ux-brand-disable h-10 rounded-xl px-3 w-[108px]"
                     >
-                      <div>Next</div>
+                      <Link href={'/select-avatar'}>Next</Link>
                     </button>
                   </div>
           </div>

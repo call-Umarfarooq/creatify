@@ -2,6 +2,7 @@ import React from 'react'
 import NavTwo from '../Elements/NavTwo'
 
 import { AlfaIcon, AmazonIcon, DotedLine, Eby, EbyIcon, PlayStore, ShopifIcon1, SosialIcon, WordPress } from '../utils/SvgIcons';
+import Link from 'next/link';
 
 const LinkToVidio = () => {
   const icons = [
@@ -67,7 +68,7 @@ const LinkToVidio = () => {
               data-loading="false"
               className="inline-flex bg-ux-hover1 items-center justify-center gap-2.5 text-label-md text-color-title bg-area-container  active:bg-ux-press h-10 rounded-xl px-3 w-[152px]"
             >
-              <div>Upload manually</div>
+              <Link href={'/link-to-video/edit-product'}>Upload manually</Link>
             </button>
             <button
               data-loading="false"

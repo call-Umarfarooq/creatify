@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import { Arrow, Feature } from "../utils/SvgIcons";
+import Link from "next/link";
 
 interface FeatureCardProps {
   id: string;
@@ -45,7 +46,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
           <p className="font-normal text-white text-sm font-sans">{label}</p>
         </div>
       </div>
-      <div className="flex flex-1 items-center justify-between bg-white/[0.05] p-4 pr-2 hover:bg-[#FFFFFF33]">
+      <Link href={'/ai-shorts'} className="flex flex-1 items-center justify-between bg-white/[0.05] p-4 pr-2 hover:bg-[#FFFFFF33]">
         <div className="flex flex-wrap">
           <p className="text-white font-medium text-[16px] leading-[20px] mb-1 truncate font-sans">
             {title}
@@ -57,7 +58,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
         <div className="flex h-[36px] w-[36px] items-center justify-center">
           <Arrow />
         </div>
-      </div>
+      </Link>
     </div>
   );
 };

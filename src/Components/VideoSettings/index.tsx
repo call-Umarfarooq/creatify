@@ -186,12 +186,12 @@ const VideoSettings = () => {
                   </button>
                 </Link>
                 <Link href="/tool/link-to-video/preparing?flowId=2feb5117-e158-4217-b251-da8ff2f7f025&step=video-setting">
-                  <button
+                  <Link href={"/generate-script"}
                     data-loading="false"
                     className="inline-flex items-center justify-center whitespace-nowrap gap-2.5 select-none text-label-md text-color-title transition-opacity ease-out focus-visible:outline-none focus-visible:shadow-focus disabled:cursor-not-allowed data-[loading=true]:cursor-progress disabled:text-color-disable bg-brand hover:bg-ux-brand-hover active:bg-ux-brand-press data-[loading=true]:bg-ux-brand-disable disabled:bg-ux-brand-disable h-10 rounded-xl px-3 w-[108px]"
                   >
                     <div>Next</div>
-                  </button>
+                  </Link>
                 </Link>
               </div>
             </div>

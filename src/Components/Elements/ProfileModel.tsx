@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import Modal from "react-modal";
 import { CreaditIcn, DashboardIn, HIcon, LogoutIcon, SettinIn, SubIcn } from "../utils/SvgIcons";
 import Link from "next/link";
+import CreaditHistoryModel from "./CreaditHistoryModel";
 
 const customStyles = {
   content: {
@@ -26,18 +27,29 @@ interface IModalProps {
   onClose: (e?: React.MouseEvent) => void;
 }
 
-const menuItems = [
-  { icon: <DashboardIn />, label: "Dashboard", href:"/" },
-  { icon: <CreaditIcn />, label: "Credits history", href:"" },
-  { icon: <SettinIn />, label: "Workspace Settings" , href:""},
-  { icon: <SubIcn />, label: "Subscription", href:"/subscription" },
-];
+
 
 const workspaceItems = [
   { icon: <HIcon />, label: "Demo User's  Workspace",href:"/projects"}
 ];
 
 function ProfileModel({ isOpen, onClose }: IModalProps) {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const handleOpenModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
+  
+  const menuItems = [
+    { icon: <DashboardIn />, label: "Dashboard", href:"/" },
+    { icon: <CreaditIcn />, label: "Credits history", href:"", onClick: handleOpenModal },
+    { icon: <SettinIn />, label: "Workspace Settings" , href:""},
+    { icon: <SubIcn />, label: "Subscription", href:"/subscription" },
+  ];
+
   return (
     <Modal isOpen={isOpen} onRequestClose={() => onClose()} style={customStyles}>
       <div className="p-4">
@@ -59,6 +71,7 @@ function ProfileModel({ isOpen, onClose }: IModalProps) {
           {menuItems.map((item, index) => (
             <Link href={`${item.href}`}
               key={index}
+              onClick={item.onClick}
               className="flex h-10 w-full items-center p-2 text-sm text-white hover:cursor-pointer hover:rounded-lg hover:bg-white/5"
             >
               <div className="flex h-[24px] w-[24px] items-center justify-center">
@@ -68,7 +81,9 @@ function ProfileModel({ isOpen, onClose }: IModalProps) {
             </Link>
           ))}
         </div>
-
+     <CreaditHistoryModel isOpen={isModalOpen} onClose={handleCloseModal}>
+      <div>sdasdasd</div>
+     </CreaditHistoryModel>
         <div className="h-[1px] my-3 w-full bg-white/5"></div>
 
         {/* Workspace Items */}

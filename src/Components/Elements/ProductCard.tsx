@@ -74,12 +74,12 @@ const ProductCard: React.FC<ProductCardProps> = ({
       </div>
       {/* Hover Overlay */}
       <div className="absolute border-[2px] border-[#6c6cf5] flex top-0 left-0 z-10 h-full w-full flex-col items-center gap-y-2 rounded-2xl bg-[#000000]/[.80] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-        <button
+        <Link href={'/link-to-video/edit-product'}
           data-loading="false"
           className="inline-flex bg-[#6c6cf5] mt-5 items-center justify-center whitespace-nowrap gap-2.5 h-12 rounded-2xl px-5 w-32"
         >
           <div>Create video</div>
-        </button>
+        </Link>
         <button
           data-loading="false"
           className="inline-flex items-center justify-center whitespace-nowrap gap-2.5 border border-current hover:text-white/[0.5] active:text-white/[0.3] :border-white/[0.24] disabled:text-white/[0.24] h-12 rounded-2xl px-5 w-32"

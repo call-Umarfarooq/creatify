@@ -2,6 +2,7 @@
 import React, { useRef, useState } from "react";
 import Layout from "../Elements/Layout";
 import NavBar from "../Elements/NavBar";
+import Link from "next/link";
 
 const ProductDetails = () => {
   const [text, setText] = useState("");
@@ -97,7 +98,7 @@ const ProductDetails = () => {
                         </svg>
                       </div>
                     </div>
-                    <button
+                    <Link href={'/link-to-video/edit-product'}
                       className="border-0 shadow-md [--btn-icon:theme(colors.black)] data-[active]:[--btn-icon:theme(colors.black)] data-[hover]:[--btn-icon:theme(colors.black)] relative isolate inline-flex items-center justify-center gap-x-2 font-sans hover:opacity-80 data-[disabled]:opacity-50 [&amp;>[data-slot=icon]]:-mx-0.5 [&amp;>[data-slot=icon]]:my-0.5 [&amp;>[data-slot=icon]]:size-5 [&amp;>[data-slot=icon]]:shrink-0 [&amp;>[data-slot=icon]]:text-[--btn-icon] [&amp;>[data-slot=icon]]:sm:my-1 [&amp;>[data-slot=icon]]:sm:size-4 forced-colors:[--btn-icon:ButtonText] forced-colors:data-[hover]:[--btn-icon:ButtonText] focus:outline-none px-[calc(theme(spacing[3.5])-1px)] py-[calc(theme(spacing[2.5])-1px)] sm:px-[calc(theme(spacing.3)-1px)] sm:py-[calc(theme(spacing[1.5])-1px)] sm:text-sm/6 h-11 w-[147px] rounded-lg bg-[#5D54FF] font-medium text-base text-white cursor-pointer"
                       type="button"
                     >
@@ -106,7 +107,7 @@ const ProductDetails = () => {
                         className="-translate-x-1/2 -translate-y-1/2 absolute top-1/2 left-1/2 size-[max(100%,2.75rem)] [@media(pointer:fine)]:hidden"
                         aria-hidden="true"
                       ></span>
-                    </button>
+                    </Link>
                   </div>
                 </div>
                 <div className="mt-6">

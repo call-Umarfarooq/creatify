@@ -194,9 +194,11 @@ const Layout = ({ children }: any) => {
               Upgrade
             </div>
           </div>
+      
           <SubscriptionModel isOpen={isModalOpen1} onClose={handleCloseModal1}>
             <div></div>
           </SubscriptionModel>
+       
           <Link
             target="_blank"
             href="https://discord.gg/VjMAuueteM"

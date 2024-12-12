@@ -33,6 +33,15 @@ body {
   display: none; /* For Chrome, Safari, and Opera */
 }
 
+.no-scrollbar1 {
+  overflow: auto; /* Allow scrolling */
+  scrollbar-width: none; /* Firefox: hide scrollbar */
+}
+
+.no-scrollbar1::-webkit-scrollbar {
+  display: none; /* Chrome, Safari: hide scrollbar */
+}
+
 .text-color-title {
   color: hsla(0, 0%, 100%, .9);
 }
@@ -222,4 +231,24 @@ body {
 
 .text-color-title {
   color: hsla(0, 0%, 100%, .9);
+}
+
+
+@media (min-width: 1252px) {
+  .dialogWidth1 {
+   min-width: 1200px;
+  }
+  .min-w-max1 {
+    min-width: max-content;
+}
+}
+
+
+@media (max-width: 1050px) {
+  .container-scroll {
+    overflow: scroll;
+  }
+  .hide-text {
+    display: none;
+  }
 }

@@ -7,15 +7,11 @@ import FreePlan from "./FreePlan";
 
 const customStyles = {
   content: {
-    top: "50%",
-    left: "50%",
-    right: "auto",
-    bottom: "auto",
-    transform: "translate(-50%, -50%)",
     backgroundColor: "#181818",
     border: "1px solid rgba(255, 255, 255, 0.2)",
     borderRadius: "12px",
     padding: "20px",
+    overflow: "hidden",
   },
   overlay: {
     zIndex: 1000,
@@ -27,6 +23,7 @@ interface IModalProps {
   children: any;
   onClose: (e?: React.MouseEvent) => void;
 }
+
 
 const SubscriptionModel = ({ isOpen, children, onClose }: IModalProps) => {
   const [selectedOption, setSelectedOption] = useState<"monthly" | "yearly">(
@@ -40,12 +37,12 @@ const SubscriptionModel = ({ isOpen, children, onClose }: IModalProps) => {
       style={customStyles}
       ariaHideApp={false}
     >
-      <div className="flex w-[1200px] h-10  items-center justify-between bg-bg-2">
+      <div className="flex dialogWidth1  h-10  items-center justify-between bg-bg-2">
         <div className="flex items-center justify-center gap-2 text-color-title text-title-h4">
           <span className="flex items-center">
             <Diamond theme="outline" size="24" fill="#FFFFFF" />
           </span>
-          <span className="min-w-max">Upgrade to remove watermark.</span>
+          <span className="min-w-max1 hide-text">Upgrade to remove watermark.</span>
         </div>
         <div className="flex flex-row items-center justify-center w-[600px]">
           <div className="relative w-full text-orange-600">
@@ -84,7 +81,7 @@ const SubscriptionModel = ({ isOpen, children, onClose }: IModalProps) => {
             </div>
           </div>
 
-          <div className="h-[29px] w-[197px] text-center relative right-[5px] my-auto">
+          <div className="h-[29px] hide-text w-[197px] text-center relative right-[5px] my-auto">
             <Offer />
             <div className="absolute top-[50%] left-0 w-full translate-y-[-50%] pl-7 text-sm text-white">
               <div className="-skew-x-12 flex items-center gap-1">
@@ -95,7 +92,7 @@ const SubscriptionModel = ({ isOpen, children, onClose }: IModalProps) => {
           </div>
         </div>
         <button
-        onClick={onClose}
+          onClick={onClose}
           data-loading="false"
           className="inline-flex items-center justify-center whitespace-nowrap gap-2.5 select-none text-label-md transition-opacity ease-out focus-visible:outline-none focus-visible:shadow-focus disabled:cursor-not-allowed data-[loading=true]:cursor-progress bg-transparent text-color-support hover:bg-ux-hover active:bg-ux-press data-[loading=true]:bg-transparent disabled:bg-transparent disabled:text-color-disable rounded-2xl p-0 h-10 w-10"
         >
@@ -103,11 +100,11 @@ const SubscriptionModel = ({ isOpen, children, onClose }: IModalProps) => {
         </button>
       </div>
 
-      <div className="max-h-[calc(100vh-100px)] overflow-y-auto no-scrollbar">
-        <div className="infinite-scroll-component__outerdiv no-scrollbar">
+      <div className="max-h-[calc(100vh-100px)] dialogWidth1  overflow-x-scroll no-scrollbar overflow-y-scroll">
+        <div className=" overflow-x-scroll overflow-y-scroll no-scrollbar">
           <div
-            className="infinite-scroll-component no-scrollbar"
-            style={{ overflow: "auto" }}
+            className=" overflow-x-scroll overflow-y-scroll   no-scrollbar"
+            // style={{ overflow: "auto" }}
           >
             <div className="flex items-center flex-col  justify-center py-4">
               <div className="mt-2 mb-4 flex items-center justify-center text-amber-300 text-label-md">
@@ -115,7 +112,7 @@ const SubscriptionModel = ({ isOpen, children, onClose }: IModalProps) => {
                 ensure you stay impressed and satisfied with our product.
               </div>
             </div>
-            <div className="grid mx-auto justify-center items-center grid-cols-[29%_38%_29%] gap-5">
+            <div className="grid mx-auto min-w-[900px] no-scrollbar overflow-scroll justify-center grid-cols-3 items-center lg:grid-cols-[29%_38%_29%] gap-5">
               <div className="">
                 {" "}
                 <PaymentStarter />
@@ -129,8 +126,8 @@ const SubscriptionModel = ({ isOpen, children, onClose }: IModalProps) => {
                 <PaymentStarter />
               </div>
             </div>
-            <div className="w-full mt-5 flex justify-center items-center">
-                <FreePlan/>
+            <div className="w-full min-w-[900px] no-scrollbar overflow-scroll mt-5 mb-8 flex justify-center items-center">
+              <FreePlan />
             </div>
           </div>
         </div>

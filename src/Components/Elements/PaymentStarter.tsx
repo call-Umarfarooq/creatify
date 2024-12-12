@@ -18,7 +18,7 @@ const PaymentStarter = () => {
   ];
 
   return (
-    <div className="relative h-[634px] flex-col gap-4 rounded-3xl border border-line-1 border-solid bg-bg-3 p-6 w-full">
+    <div className="relative w-full h-[634px] flex-col gap-4 rounded-3xl border border-line-1 border-solid bg-bg-3 p-6 ">
       {/* Header */}
       <div className="flex items-center gap-3">
         <div className="font-bold text-4xl text-white">Starter</div>
@@ -29,8 +29,8 @@ const PaymentStarter = () => {
 
       {/* Pricing */}
       <div className="flex mt-6 mb-6 items-baseline gap-2">
-        <div className="text-color-support text-title-h6 line-through">$39 USD</div>
-        <div className="text-purple-500 text-title-h1">$33 USD</div>
+        <div className="text-color-support min-w-max text-title-h6 line-through">$39 USD</div>
+        <div className="text-purple-500 min-w-max text-title-h1">$33 USD</div>
         <div className="text-color-title text-title-h5">/mo</div>
       </div>
 

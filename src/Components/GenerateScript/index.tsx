@@ -16,9 +16,9 @@ const GenerateScript = () => {
   };
   return (
     <div className="bg2 gradient-bg1">
-      <div className="relative  linearG h-screen w-screen flex-col overflow-x-hidden sm:pt-[98px] lg:pt-[72px]">
+      <div className="relative  linearG h-screen w-screen flex-col overflow-x-hidden pt-[72px]">
         <NavTwo />
-        <div className="relative  top-0 left-0 h-full overflow-y-auto">
+        <div className="h-full px-8">
           <div className="flex  mx-auto flex-col text-white h-full max-w-[720px]  ">
             <div className="mt-6 text-title-h3">
               Choose or create your script
@@ -32,9 +32,9 @@ const GenerateScript = () => {
                     width: isAiScript ? "50%" : "50%",
                   }}
                 ></div>
-                <div className="absolute top-0 right-0 bottom-0 left-0 box-border flex items-stretch justify-between font-semibold">
+                <div className=" box-border items-center flex  text-center h-full justify-between font-semibold">
                   <div
-                    className="flex flex-1 cursor-pointer items-center justify-center text-sm !mix-blend-normal text-color-title mix-blend-exclusion"
+                    className="flex flex-1 text-center cursor-pointer items-center justify-center text-sm !mix-blend-normal text-color-title mix-blend-exclusion"
                     onClick={() => handleScriptSelection(true)}
                   >
                     Choose script from AI

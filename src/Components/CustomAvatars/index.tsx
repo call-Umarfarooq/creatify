@@ -30,7 +30,7 @@ const CustomAvatars = () => {
   };
   return (
     <Layout>
-      <div className="no-scrollbar relative h-full flex-col overflow-y-auto rounded-2xl bg-white/5">
+      <div className="no-scrollbar relative h-[93vh] flex-col overflow-y-auto rounded-2xl bg-white/5">
         <div className="page-in h-full text-white p-5">
           <div className="font-bold text-[32px] text-white">Custom Avatars</div>
           <div className="w-full">
@@ -61,11 +61,11 @@ const CustomAvatars = () => {
             </div>
             <div className="mt-[3px] h-[1px] bg-line-1"></div>
 
-            <div className=" h-[calc(100%-300px)] overflow-y-auto">
-              <div className="infinite-scroll-component__outerdiv ">
+            <div className=" h-[calc(100%-300px)] pb-5 overflow-y-auto">
+              <div className="infinite-scroll-component__outerdiv  ">
                 <div
-                  className="infinite-scroll-component no-scrollbar"
-                  style={{ height: "420px", overflow: "auto" }}
+                  className="infinite-scroll-component  no-scrollbar"
+                  style={{ height: "430px", overflow: "auto" }}
                 >
                   <div className="flex-center flex items-center gap-4 py-8">
                     <div

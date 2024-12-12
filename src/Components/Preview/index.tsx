@@ -4,11 +4,11 @@ import NavTwo from "../Elements/NavTwo";
 const Preview = () => {
   return (
     <div className="bg2 gradient-bg1">
-      <div className="relative linearG h-screen w-screen flex-col overflow-x-hidden sm:pt-[98px] lg:pt-[72px]">
+      <div className="relative linearG h-screen w-screen flex-col overflow-x-hidden pt-[72px]">
         <NavTwo />
-        <div className="relative top-0 left-0 h-full overflow-y-auto">
-          <div className="fixed top-[80px]  w-full flex-col items-center justify-center pt-1">
-            <div className="z-[40] flex w-full mx-auto  max-w-[1200px] flex-row items-center justify-between pr-[24px] pl-[24px]">
+        <div className="">
+          <div className="fixed top-[80px] z-50  w-full flex-col items-center justify-center pt-1">
+            <div className=" relative z-50 flex w-full mx-auto  max-w-[1200px] flex-row items-center justify-between pr-[24px] pl-[24px]">
               <div className="flex flex-col gap-1">
                 <div className="line-clamp-1 text-white text-title-h4">
                   11 videos are generated! Select one or more to render
@@ -65,7 +65,7 @@ const Preview = () => {
             </div>
           </div>
 
-          <div className="absolute flex w-full flex-col items-center overflow-y-scroll pr-2 pl-2 top-[85px] h-[calc(100%-85px)] sm:top-[150px] sm:h-[calc(100%-150px)] md:top-[45px] md:h-[calc(100%-45px)] lg:top-[70px] lg:h-[calc(100%-70px)] xl:top-[70px] xl:h-[calc(100%-70px)]">
+          <div className="absolute z-0 flex w-full flex-col items-center overflow-y-scroll pr-2 pl-2 top-[175px] h-[calc(100%-85px)] sm:top-[200px] sm:h-[calc(100%-150px)] md:top-[150px] md:h-[calc(100%-45px)] lg:top-[200px]  lg:h-[calc(100%-70px)]  xl:h-[calc(100%-70px)]">
             <div className="w-full flex-row flex-wrap grid max-w-[1200px] gap-x-[24px] gap-y-[24px] pr-[24px] pb-[48px] pl-[24px] grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
               <div className="shadow-focus-md cursor-pointer hover:shadow-focus-md relative mt-3 box-content h-full w-full overflow-hidden rounded-2xl border border-line-2 border-solid">
                 <div className="w-full bg-area-platform aspect-9/16">

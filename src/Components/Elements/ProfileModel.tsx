@@ -3,18 +3,18 @@ import Modal from "react-modal";
 import { CreaditIcn, DashboardIn, HIcon, LogoutIcon, SettinIn, SubIcn } from "../utils/SvgIcons";
 import Link from "next/link";
 import CreaditHistoryModel from "./CreaditHistoryModel";
+import { Left } from "@icon-park/react";
 
 const customStyles = {
   content: {
-    top: "50%",
-    left: "35%",
-    right: "auto",
+    left: "320px",
+    top: "80px",
     bottom: "auto",
-    transform: "translate(-50%, -50%)",
     backgroundColor: "#181818",
     border: "1px solid #181818",
     borderRadius: "12px",
     padding: "0px",
+    width: "300px",
   },
   overlay: {
     zIndex: 1000,
@@ -52,7 +52,7 @@ function ProfileModel({ isOpen, onClose }: IModalProps) {
 
   return (
     <Modal isOpen={isOpen} onRequestClose={() => onClose()} style={customStyles}>
-      <div className="p-4">
+      <div className="p-4 ">
         {/* Profile Header */}
         <div className="self-start mb-4 text-white/80 text-xs">Demo User</div>
         <Link href={"/account/settings"} className=" ">

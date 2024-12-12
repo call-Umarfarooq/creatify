@@ -13,10 +13,10 @@ const EditProduct = () => {
 
   return (
     <div className="bg2 gradient-bg1">
-      <div className="relative  linearG h-screen w-screen flex-col overflow-x-hidden sm:pt-[98px] lg:pt-[72px]">
+      <div className="relative  linearG  flex-col ">
         <NavTwo />
-        <div className="relative  top-0 left-0 h-full overflow-y-auto">
-          <div className="flex  mx-auto flex-col text-white h-full max-w-[720px]  ">
+        <div className=" h-full ">
+          <div className="flex pt-20 px-8  mx-auto flex-col text-white h-full max-w-[730px]  ">
             <div className="pt-6 text-title-h3">
               Add media and product details
             </div>
@@ -24,7 +24,7 @@ const EditProduct = () => {
               <div className="w-full flex-col gap-3">
                 {/* Label for Input */}
                 <div className="flex gap-2">
-                  <div className="text-color-title text-title-h7">
+                  <div className="text-color-title my-3 text-title-h7">
                     Brand / Product name
                   </div>
                 </div>
@@ -45,7 +45,7 @@ const EditProduct = () => {
               </div>
               <div className="w-full flex-col gap-3">
                 <div className="flex gap-2">
-                  <div className="text-color-title text-title-h7">Logo</div>
+                  <div className="text-color-title my-3 text-title-h7">Logo</div>
                 </div>
 
                 {/* File Upload */}
@@ -137,15 +137,15 @@ const EditProduct = () => {
                     video.
                   </span>
                 </div>
-                <div className="flex-col  gap-3">
-                  <div className="flex  h-5 items-center">
+                <div className="flex-col flex gap-3">
+                  <div className="flex mt-3  mb-3 h-5 items-center">
                     ⭐ &nbsp;
                     <div className="bg-gradient-to-r from-[#E5E5FF] to-[#8080FF] bg-clip-text text-label-md text-transparent">
                       Confirm the assets you want to use. Higher-quality clips
                       and images result in better results.
                     </div>
                   </div>
-                  <div className="grid max-h-[320px] w-full mt-2 grid-cols-5 flex-wrap items-start gap-3 overflow-hidden overflow-y-auto rounded-2xl bg-area-container p-4 ">
+                  <div className="grid  max-h-[320px] w-full  grid-cols-5 flex-wrap items-start gap-3 overflow-hidden overflow-y-auto rounded-2xl bg-area-container p-4 ">
                     <div className="cursor-pointer flex-col items-center justify-center overflow-hidden rounded-2xl bg-area-container hover:bg-ux-hover active:bg-ux-press aspect-1/1 h-auto w-full border-2 border-transparent border-solid">
                       <input
                         multiple

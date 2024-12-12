@@ -6,9 +6,9 @@ import Link from "next/link";
 const SelectAvatar = () => {
   return (
     <div className="bg2 gradient-bg1">
-      <div className="relative linearG h-screen w-screen flex-col overflow-x-hidden sm:pt-[98px] lg:pt-[72px]">
+      <div className="relative linearG h-screen w-screen flex-col overflow-x-hidden pt-[72px]">
         <NavTwo />
-        <div className="relative top-0 left-0 h-full overflow-y-auto">
+        <div className="px-8 h-full overflow-y-auto">
           <div className="flex flex-col h-full max-w-[700px] mx-auto">
             <div className="mt-6 flex flex-col gap-2">
               <div className="text-color-title text-title-h3">
@@ -63,7 +63,8 @@ const SelectAvatar = () => {
                   aria-controls="radix-:r0:-content-custom"
                   data-state="inactive"
                   id="radix-:r0:-trigger-custom"
-                  className="flex-center whitespace-nowrap ring-offset-white transition-all duration-100 font-semibold text-color-support hover:text-color-title disabled:pointer-events-none disabled:opacity-50 data-[state=active]:text-color-title focus-visible:ring-neutral-950 focus-visible:ring-offset-2 dark:ring-offset-neutral-950 pb-2 text-base"
+                  className=" hidden sm:flex
+                   whitespace-nowrap ring-offset-white transition-all duration-100 font-semibold text-color-support hover:text-color-title disabled:pointer-events-none disabled:opacity-50 data-[state=active]:text-color-title focus-visible:ring-neutral-950 focus-visible:ring-offset-2 dark:ring-offset-neutral-950 pb-2 text-base"
                   tabIndex={-1}
                   data-orientation="horizontal"
                   data-radix-collection-item=""
@@ -72,7 +73,7 @@ const SelectAvatar = () => {
                 </button>
               </div>
 
-              <div className="flex items-center">
+              <div className="sm:flex hidden items-center">
                 <div className="flex h-10 w-10 cursor-pointer items-center justify-center">
                   <svg
                     className="text-white"
@@ -212,7 +213,7 @@ const SelectAvatar = () => {
             </div>
 
             <div className="size-full overflow-hidden overflow-y-auto flex-1">
-              <div className="grid mt-2 grid-cols-5 gap-4">
+              <div className="grid mt-2 grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
                 <AvatarCard />
                 <AvatarCard />
                 <AvatarCard />

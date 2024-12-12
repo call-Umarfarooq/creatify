@@ -17,12 +17,12 @@ const LinkToVidio = () => {
   ];
   return (
     <div className='bg2 gradient-bg1'>
-    <div className='relative linearG h-screen w-screen flex-col overflow-x-hidden sm:pt-[98px] lg:pt-[72px]'>
+    <div className='relative linearG h-screen w-screen flex-col overflow-x-hidden '>
         <NavTwo/>
-        <div className="relative top-0 left-0 h-full overflow-y-auto">
+        <div className=" h-full ">
       <div className="flex h-full justify-center">
-        <div className="page-in -mt-20 h-full flex flex-col justify-center gap-8 pr-5 pl-5 lg:pr-0 lg:pl-0">
-          <div className="text-color-title text-title-h1">
+        <div className=" h-full flex flex-col justify-center gap-8  ">
+          <div className="text-color-title mt-12 md:text-[28px] lg:text-[32px] font-[700] ">
             Share your <span className="text-brand">product link</span> to generate a video
           </div>
 

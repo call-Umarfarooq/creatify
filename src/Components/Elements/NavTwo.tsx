@@ -8,8 +8,8 @@ const NavTwo: React.FC = () => {
       <a className="h-[48px] w-auto flex items-center pl-[30px] cursor-pointer" href="/">
         <div className="flex items-center">
         <LogoSm />
-          <div className="mx-6 h-6 w-px bg-line-1"></div>
-          <h2 className="font-semibold text-color-title text-lg">
+          <div className="mx-6 sm:block hidden h-6 w-px bg-line-1"></div>
+          <h2 className="font-semibold hidden sm:block text-color-title text-lg">
             Create video via URL
           </h2>
         </div>
@@ -17,9 +17,7 @@ const NavTwo: React.FC = () => {
       <div className="flex flex-row items-center md:gap-4 md:pr-10">
         {/* Discord Link */}
         <div
-          data-tooltip-id="tooltip"
-          data-tooltip-content="Join in our Discord"
-          data-tooltip-hidden="false"
+        
         >
           <a
             target="_blank"
@@ -44,12 +42,7 @@ const NavTwo: React.FC = () => {
         </div>
 
         {/* Credits Section */}
-        <div
-          data-tooltip-id="tooltip"
-          data-tooltip-content="0 credits"
-          data-tooltip-place="right"
-          data-tooltip-hidden="true"
-        >
+        <div className='hidden sm:block'>
           <div className="flex h-[48px] cursor-pointer items-center justify-between rounded-xl border-2 border-[#5C54FF] border-solid bg-[#5C54FF]/[0.2] px-3 text-sm text-white hover:bg-[#5C54FF]/[0.1]">
             <div className="flex items-center pr-2 h-[46px] w-fit rounded-lg">
               <div className="flex items-center justify-center text-white">
@@ -71,11 +64,7 @@ const NavTwo: React.FC = () => {
               className="inline-flex cursor-pointer bg-transparent focus:border-none focus:outline-none w-full"
               aria-expanded="false"
             >
-              <div
-                data-tooltip-id="tooltip"
-                data-tooltip-content="umarfarooqjani61@gmail.com"
-                data-tooltip-hidden="false"
-              >
+              <div>
                 <div className="flex cursor-pointer items-center justify-center h-[48px] w-[48px]">
                   <div className="flex items-center justify-center bg-[#5e2991] text-white h-[48px] w-[48px] rounded-full">
                     <p className="text-white font-bold leading-4">M</p>

@@ -36,10 +36,10 @@ const VideoSettings = () => {
 
   return (
     <div className="bg2 gradient-bg1">
-      <div className="relative  linearG h-screen w-screen flex-col overflow-x-hidden sm:pt-[98px] lg:pt-[72px]">
+      <div className="  linearG flex flex-col  pt-24">
         <NavTwo />
-        <div className="relative  top-0 left-0 h-full overflow-y-auto">
-          <div className="flex  mx-auto flex-col text-white h-full max-w-[720px]  ">
+        <div className="">
+          <div className="flex mx-auto flex-col text-white h-full max-w-[600px] px-8 ">
             <div className=" space-y-6">
               <div className="pt-6 text-title-h3">Video settings</div>
               <div className="w-full flex-col gap-3">

@@ -4,6 +4,7 @@ import Image from "next/image";
 import React, { useState } from "react";
 import Modal from "react-modal";
 import { Crossicon } from "../utils/SvgIcons";
+import { BackgroundColor } from "@icon-park/react";
 
 const customStyles = {
   content: {
@@ -19,7 +20,10 @@ const customStyles = {
     overflow: "visible",
     border: "1px solid rgba(255, 255, 255, 0.2)",
   },
-  overlay: { zIndex: 1000 },
+  overlay: {
+    zIndex: 1000,
+    backgroundColor: "rgba(0, 0, 0, 0.75)",
+  }
 };
 
 interface IModalProps {
@@ -42,7 +46,7 @@ function CreaditHistoryModel({ isOpen, children, onClose }: IModalProps) {
     >
       <div
         id="popular-tools-modal"
-        className="row-start-2 w-full min-w-0 p-5 bg-[#181818] ring-1 ring-zinc-950/10 sm:mb-auto  shadow-unsubscription-modal sm:max-w-4xl"
+        className="row-start-2 w-full  p-5 bg-[#181818] ring-1 ring-zinc-950/10 sm:mb-auto  shadow-unsubscription-modal sm:max-w-4xl"
       >
         <div className="flex justify-between items-center ">
           <h2
@@ -81,13 +85,13 @@ function CreaditHistoryModel({ isOpen, children, onClose }: IModalProps) {
             <div className="flex items-center gap-1">
               <p
                 data-slot="text"
-                className="font-normal min-w-max text-[12px] leading-[16px] text-white/60 font-sans"
+                className="font-normal  text-[12px] leading-[16px] text-white/60 font-sans"
               >
                 Current credits:
               </p>
               <p
                 data-slot="text"
-                className="font-normal min-w-max text-white text-[12px] leading-[16px] font-sans"
+                className="font-normal  text-white text-[12px] leading-[16px] font-sans"
               >
                 Free(10 credits/<span>mo</span>)
               </p>
@@ -104,13 +108,13 @@ function CreaditHistoryModel({ isOpen, children, onClose }: IModalProps) {
             <div className="flex items-center gap-1">
               <p
                 data-slot="text"
-                className="font-normal min-w-max text-[12px] leading-[16px] text-white/60 font-sans"
+                className="font-normal  text-[12px] leading-[16px] text-white/60 font-sans"
               >
                 Next renewal:
               </p>
               <p
                 data-slot="text"
-                className="font-normal min-w-max text-white text-[12px] leading-[16px] font-sans"
+                className="font-normal  text-white text-[12px] leading-[16px] font-sans"
               >
                 December 29, 2024
               </p>
@@ -119,7 +123,7 @@ function CreaditHistoryModel({ isOpen, children, onClose }: IModalProps) {
             <div className="flex items-center gap-1">
               <p
                 data-slot="text"
-                className="font-normal min-w-max text-[12px] leading-[16px] text-white/60 font-sans"
+                className="font-normal  text-[12px] leading-[16px] text-white/60 font-sans"
               >
                 Credits left:
               </p>
@@ -145,66 +149,66 @@ function CreaditHistoryModel({ isOpen, children, onClose }: IModalProps) {
 
         <div className="h-[428px] mt-4 overflow-y-auto overflow-x-hidden rounded-lg border border-white/20 border-solid">
       <div className="page-in w-full p-5">
-        <div className="flow-root">
-          <div className="-mx-[--gutter] overflow-x-auto whitespace-nowrap">
+        <div className="">
+          <div className="-mx-[--gutter] overflow-x-auto md:whitespace-nowrap">
             <div className="inline-block min-w-full align-middle sm:px-[--gutter]">
               <table className="border-0 border-collapse min-w-full text-left text-sm/6">
                 <thead className="text-zinc-500">
                   <tr>
-                    <th className="border-b border-b-zinc-950/10 px-4 py-2 font-medium first:pl-[var(--gutter,theme(spacing.2))] last:pr-[var(--gutter,theme(spacing.2))] sm:last:pr-2 sm:first:pl-2">
+                    <th className="border-b border-b-zinc-950/10 px-4 py-2 font-medium ">
                       Item
                     </th>
-                    <th className="border-b border-b-zinc-950/10 px-4 py-2 font-medium first:pl-[var(--gutter,theme(spacing.2))] last:pr-[var(--gutter,theme(spacing.2))] sm:last:pr-2 sm:first:pl-2">
+                    <th className="border-b border-b-zinc-950/10 px-4 py-2 font-medium ">
                       Description
                     </th>
-                    <th className="border-b border-b-zinc-950/10 px-4 py-2 font-medium first:pl-[var(--gutter,theme(spacing.2))] last:pr-[var(--gutter,theme(spacing.2))] sm:last:pr-2 sm:first:pl-2">
+                    <th className="border-b border-b-zinc-950/10 px-4 py-2 font-medium ">
                       Credits
                     </th>
-                    <th className="border-b border-b-zinc-950/10 px-4 py-2 font-medium first:pl-[var(--gutter,theme(spacing.2))] last:pr-[var(--gutter,theme(spacing.2))] sm:last:pr-2 sm:first:pl-2">
+                    <th className="border-b border-b-zinc-950/10 px-4 py-2 font-medium ">
                       Created At
                     </th>
                   </tr>
                 </thead>
                 <tbody className="mt-1 text-white/[0.6]">
                   <tr className="border-b border-b-white border-solid">
-                    <td className="font-medium relative px-4 first:pl-[var(--gutter,theme(spacing.2))] last:pr-[var(--gutter,theme(spacing.2))] border-zinc-950/5 border-b py-4 sm:last:pr-2 sm:first:pl-2">
+                    <td className="font-medium relative px-4 border-zinc-950/5 border-b py-4 ">
                       use_credit
                     </td>
-                    <td className="relative px-4 first:pl-[var(--gutter,theme(spacing.2))] min-w-max last:pr-[var(--gutter,theme(spacing.2))] border-zinc-950/5 border-b py-4 sm:last:pr-2 sm:first:pl-2 whitespace-nowrap overflow-hidden text-ellipsis">
+                    <td className=" px-4  border-zinc-950/5 border-b py-4 ">
                       Link to Video (ccc45782-15bd-4f06-9282-29dbccf310bb)
                     </td>
-                    <td className="relative px-4 first:pl-[var(--gutter,theme(spacing.2))] last:pr-[var(--gutter,theme(spacing.2))] border-zinc-950/5 border-b py-4 sm:last:pr-2 sm:first:pl-2">
+                    <td className="relative px-4  border-zinc-950/5 border-b py-4 ">
                       -5
                     </td>
-                    <td className="relative px-4 first:pl-[var(--gutter,theme(spacing.2))] last:pr-[var(--gutter,theme(spacing.2))] border-zinc-950/5 border-b py-4 sm:last:pr-2 sm:first:pl-2">
+                    <td className="relative px-4  border-zinc-950/5 border-b py-4 ">
                       Dec 01, 2024
                     </td>
                   </tr>
                   <tr className="border-b border-b-white border-solid">
-                    <td className="font-medium relative px-4 first:pl-[var(--gutter,theme(spacing.2))] last:pr-[var(--gutter,theme(spacing.2))] border-zinc-950/5 border-b py-4 sm:last:pr-2 sm:first:pl-2">
+                    <td className="font-medium relative px-4  border-zinc-950/5 border-b py-4 ">
                       use_credit
                     </td>
-                    <td className="relative px-4 first:pl-[var(--gutter,theme(spacing.2))] min-w-max last:pr-[var(--gutter,theme(spacing.2))] border-zinc-950/5 border-b py-4 sm:last:pr-2 sm:first:pl-2 whitespace-nowrap overflow-hidden text-ellipsis">
+                    <td className="relative px-4  border-zinc-950/5 border-b py-4 s">
                       Link to Video (b23a7c52-8708-46b9-886d-8db5927cbc0b)
                     </td>
-                    <td className="relative px-4 first:pl-[var(--gutter,theme(spacing.2))] last:pr-[var(--gutter,theme(spacing.2))] border-zinc-950/5 border-b py-4 sm:last:pr-2 sm:first:pl-2">
+                    <td className="relative px-4 border-zinc-950/5 border-b py-4 ">
                       -5
                     </td>
-                    <td className="relative px-4 first:pl-[var(--gutter,theme(spacing.2))] last:pr-[var(--gutter,theme(spacing.2))] border-zinc-950/5 border-b py-4 sm:last:pr-2 sm:first:pl-2">
+                    <td className="relative px-4  border-zinc-950/5 border-b py-4 ">
                       Dec 01, 2024
                     </td>
                   </tr>
                   <tr className="border-b border-b-white border-solid">
-                    <td className="font-medium relative px-4 first:pl-[var(--gutter,theme(spacing.2))] last:pr-[var(--gutter,theme(spacing.2))] border-zinc-950/5 border-b py-4 sm:last:pr-2 sm:first:pl-2">
+                    <td className="font-medium relative px-4 ] border-zinc-950/5 border-b py-4 ">
                       free_credit
                     </td>
-                    <td className="whitespace-pre-line relative px-4 first:pl-[var(--gutter,theme(spacing.2))] last:pr-[var(--gutter,theme(spacing.2))] border-zinc-950/5 border-b py-4 sm:last:pr-2 sm:first:pl-2">
+                    <td className="whitespace-pre-line relative px-4  border-zinc-950/5 border-b py-4 ">
                       Monthly grant of free
                     </td>
-                    <td className="relative px-4 first:pl-[var(--gutter,theme(spacing.2))] last:pr-[var(--gutter,theme(spacing.2))] border-zinc-950/5 border-b py-4 sm:last:pr-2 sm:first:pl-2">
+                    <td className="relative px-4  border-zinc-950/5 border-b py-4">
                       10
                     </td>
-                    <td className="relative px-4 first:pl-[var(--gutter,theme(spacing.2))] last:pr-[var(--gutter,theme(spacing.2))] border-zinc-950/5 border-b py-4 sm:last:pr-2 sm:first:pl-2">
+                    <td className="relative px-4  border-zinc-950/5 border-b py-4 ">
                       Nov 29, 2024
                     </td>
                   </tr>

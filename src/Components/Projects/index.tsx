@@ -65,7 +65,7 @@ const Projects = () => {
   ];
   return (
     <Layout>
-      <div className="no-scrollbar relative h-full flex-col overflow-y-auto rounded-2xl bg-white/5">
+      <div className="no-scrollbar relative h-[93vh]   flex-col overflow-y-auto rounded-2xl bg-white/5">
         <div className="page-in h-full text-white p-5">
           <p className="font-normal text-[#9B9C9E] text-sm font-sans">
           Demo User Workspace
@@ -183,11 +183,11 @@ const Projects = () => {
           </div>
 
           <CheckBoxWIthUploadDelete setIscheck={setIscheck} />
-          <div className=" h-[calc(100%-300px)] overflow-y-auto">
+          <div className=" h-[calc(100%-100px)] overflow-y-auto">
             <div className="infinite-scroll-component__outerdiv ">
               <div
                 className="infinite-scroll-component no-scrollbar"
-                style={{ height: "252px", overflow: "auto" }}
+                style={{ height: "300px", overflow: "auto" }}
               >
                 <div className="mt-[20px] flex-row justify-center p-1 pb-[100px]">
                   {selectedFilter === 1 || selectedFilter === 2 ? (

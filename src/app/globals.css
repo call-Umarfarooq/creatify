@@ -252,3 +252,22 @@ body {
     display: none;
   }
 }
+
+@media (min-width: 1056px) {
+  .hide-component {
+    display: none;
+  }
+}
+@media (max-width: 1056px) {
+  .hide-component1 {
+    display: none;
+  }
+}
+
+
+.bg-area-container-purple1 {
+  background-clip: padding-box, border-box;
+  background-origin: padding-box, border-box;
+  background-image: linear-gradient(to right, rgb(24, 26, 31), rgb(24, 26, 31)), linear-gradient(rgb(151, 99, 255), rgb(84, 156, 227));
+  border: 2px solid transparent;
+}

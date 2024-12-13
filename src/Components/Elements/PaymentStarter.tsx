@@ -1,10 +1,17 @@
 import React from "react";
 import { Check, Info, Caution } from "@icon-park/react";
+import { ImageIcon22 } from "../utils/SvgIcons";
 
-const PaymentStarter = () => {
+const PaymentStarter = ({selectedOption}:{selectedOption:string}) => {
+
+  const isMonthly = selectedOption === "monthly" ? true : false;
+
+
   const features = [
-    { icon: <Check theme="outline" size="16" fill="#FFFFFFB2" />, text: "1200 Credits /yr (≈ 240 videos)", tooltip: "5 credits is charged for every 30s of video, rounded up.", subtext: "Credits expire yearly" },
-    { icon: <Check theme="outline" size="16" fill="#FFFFFFB2" />, text: "1 Seat", tooltip: "", subtext: "" },
+    { icon: <Check theme="outline" size="16" fill="#FFFFFFB2" />, text: isMonthly 
+      ? "100 Credits /mo (≈ 20 videos)" 
+      : "1200 Credits /yr (≈ 240 videos)", tooltip: "5 credits is charged for every 30s of video, rounded up.", subtext: "Credits expire yearly" },
+    // { icon: <Check theme="outline" size="16" fill="#FFFFFFB2" />, text: "1 Seat", tooltip: "", subtext: "" },
     { icon: <Caution theme="outline" size="16" fill="#FFFFFFB2" />, text: "0 Custom Avatars", tooltip:"", subtext: "" },
   ];
 
@@ -22,25 +29,27 @@ const PaymentStarter = () => {
       {/* Header */}
       <div className="flex items-center gap-3">
         <div className="font-bold text-4xl text-white">Starter</div>
-        <div className="flex h-6 w-[68px] items-center justify-center rounded-full bg-purple-900 text-color-title text-title-h8">
+        
+        {!isMonthly &&<div className="flex h-6 w-[68px] items-center justify-center rounded-full bg-purple-900 text-color-title text-title-h8">
           15% OFF
         </div>
+}
       </div>
 
       {/* Pricing */}
       <div className="flex mt-6 mb-6 items-baseline gap-2">
-        <div className="text-color-support min-w-max text-title-h6 line-through">$39 USD</div>
-        <div className="text-purple-500 min-w-max text-title-h1">$33 USD</div>
+      {!isMonthly && <div className="text-color-support min-w-max text-title-h6 line-through">$39 USD</div>}
+        <div className={` ${isMonthly ? 'text-white':'text-purple-500'}  min-w-max text-title-h1 `}> ${isMonthly ? 39 : 33} USD</div>
         <div className="text-color-title text-title-h5">/mo</div>
       </div>
 
       {/* Features */}
-      <div className="flex-col gap-2">
+      <div className="flex-col gap-2 w-full">
         {features.map(({ icon, text, tooltip, subtext }, index) => (
           <div key={index} className="flex-col flex gap-1">
-            <div className="flex w-full items-center gap-2">
+            <div className="flex w-full  items-center gap-2">
               <div className="flex h-4 w-4 items-center justify-center">{icon}</div>
-              <div className="flex mt-3 items-center justify-center text-color-body text-sm font-semibold">{text}</div>
+              <div className="flex mt-3 items-center  justify-center text-color-body text-sm font-semibold">{text}</div>
               {tooltip && (
                 <div
                   data-tooltip-id="tooltip"
@@ -97,7 +106,7 @@ const PaymentStarter = () => {
                     data-tooltip-html={tooltip}
                     className="flex items-center justify-center"
                   >
-                    <Check theme="outline" size="16" fill="#FFFFFFB2" />
+                      <ImageIcon22 />
                   </div>
                 )}
               </div>

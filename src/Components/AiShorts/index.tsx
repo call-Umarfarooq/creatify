@@ -1,5 +1,6 @@
 import React from "react";
 import NavTwo from "../Elements/NavTwo";
+import Image from "next/image";
 
 const AiShorts = () => {
   return (
@@ -292,7 +293,9 @@ const AiShorts = () => {
                           </svg>
                         </div>
                         <div className="relative h-full w-full overflow-hidden rounded-2xl bg-black/25 shadow-2xl backdrop-blur-md">
-                          <img
+                          <Image
+                            height={500}
+                            width={500}
                             className="h-full w-full"
                             src="/assets/collage.png"
                             alt="cover"
@@ -317,7 +320,9 @@ const AiShorts = () => {
                       {/* Repeat for other art styles */}
                       <div className="relative flex aspect-1/1 w-full cursor-pointer flex-col rounded-2xl border border-solid border-[#fff]/[.0]">
                         <div className="relative h-full w-full overflow-hidden rounded-2xl bg-black/25 shadow-2xl backdrop-blur-md">
-                          <img
+                          <Image
+                            height={500}
+                            width={500}
                             className="h-full w-full"
                             src="/assets/collage.png"
                             alt="cover"
@@ -341,7 +346,9 @@ const AiShorts = () => {
 
                       <div className="relative flex aspect-1/1 w-full cursor-pointer flex-col rounded-2xl border border-solid border-[#fff]/[.0]">
                         <div className="relative h-full w-full overflow-hidden rounded-2xl bg-black/25 shadow-2xl backdrop-blur-md">
-                          <img
+                          <Image
+                          height={500}
+                          width={500}
                             className="h-full w-full"
                             src="/assets/collage.png"
                             alt="cover"
@@ -364,7 +371,9 @@ const AiShorts = () => {
                       </div>
                       <div className="relative flex aspect-1/1 w-full cursor-pointer flex-col rounded-2xl border border-solid border-[#fff]/[.0]">
                         <div className="relative h-full w-full overflow-hidden rounded-2xl bg-black/25 shadow-2xl backdrop-blur-md">
-                          <img
+                          <Image 
+                          height={500}
+                          width={500}
                             className="h-full w-full"
                             src="/assets/collage.png"
                             alt="cover"
@@ -387,7 +396,9 @@ const AiShorts = () => {
                       </div>
                       <div className="relative flex aspect-1/1 w-full cursor-pointer flex-col rounded-2xl border border-solid border-[#fff]/[.0]">
                         <div className="relative h-full w-full overflow-hidden rounded-2xl bg-black/25 shadow-2xl backdrop-blur-md">
-                          <img
+                          <Image
+                          height={500}
+                          width={500}
                             className="h-full w-full"
                             src="/assets/collage.png"
                             alt="cover"
@@ -410,7 +421,9 @@ const AiShorts = () => {
                       </div>
                       <div className="relative flex aspect-1/1 w-full cursor-pointer flex-col rounded-2xl border border-solid border-[#fff]/[.0]">
                         <div className="relative h-full w-full overflow-hidden rounded-2xl bg-black/25 shadow-2xl backdrop-blur-md">
-                          <img
+                          <Image
+                          height={500}
+                          width={500}
                             className="h-full w-full"
                             src="/assets/collage.png"
                             alt="cover"
@@ -433,7 +446,9 @@ const AiShorts = () => {
                       </div>
                       <div className="relative flex aspect-1/1 w-full cursor-pointer flex-col rounded-2xl border border-solid border-[#fff]/[.0]">
                         <div className="relative h-full w-full overflow-hidden rounded-2xl bg-black/25 shadow-2xl backdrop-blur-md">
-                          <img
+                          <Image
+                          height={500}
+                          width={500}
                             className="h-full w-full"
                             src="/assets/collage.png"
                             alt="cover"
@@ -456,7 +471,9 @@ const AiShorts = () => {
                       </div>
                       <div className="relative flex aspect-1/1 w-full cursor-pointer flex-col rounded-2xl border border-solid border-[#fff]/[.0]">
                         <div className="relative h-full w-full overflow-hidden rounded-2xl bg-black/25 shadow-2xl backdrop-blur-md">
-                          <img
+                          <Image
+                          height={500}
+                          width={500}
                             className="h-full w-full"
                             src="/assets/collage.png"
                             alt="cover"
@@ -479,7 +496,9 @@ const AiShorts = () => {
                       </div>
                       <div className="relative flex aspect-1/1 w-full cursor-pointer flex-col rounded-2xl border border-solid border-[#fff]/[.0]">
                         <div className="relative h-full w-full overflow-hidden rounded-2xl bg-black/25 shadow-2xl backdrop-blur-md">
-                          <img
+                          <Image
+                            height={500}
+                            width={500}
                             className="h-full w-full"
                             src="/assets/collage.png"
                             alt="cover"
@@ -503,36 +522,35 @@ const AiShorts = () => {
                     </div>
                   </div>
                 </div>
-              
               </div>
               <div className="flex justify-center mt">
-                  <button
-                    className={`inline-flex items-center justify-center whitespace-nowrap gap-2.5 select-none text-label-md text-color-title transition-opacity ease-out focus-visible:outline-none focus-visible:shadow-focus disabled:cursor-not-allowed  bg-brand hover:bg-ux-brand-hover active:bg-ux-brand-press
+                <button
+                  className={`inline-flex items-center justify-center whitespace-nowrap gap-2.5 select-none text-label-md text-color-title transition-opacity ease-out focus-visible:outline-none focus-visible:shadow-focus disabled:cursor-not-allowed  bg-brand hover:bg-ux-brand-hover active:bg-ux-brand-press
        disabled:text-color-disable disabled:bg-ux-brand-disable rounded-2xl px-5 h-[50px] w-[150px] lg:w-[226px]`}
-                  >
-                    <div>Next</div>
-                    <span className="icon">
-                      <svg
-                        preserveAspectRatio="xMidYMid meet"
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
-                        fill="none"
-                        viewBox="0 0 48 48"
-                      >
-                        <g>
-                          <path
-                            data-follow-fill="currentColor"
-                            fill="currentColor"
-                            d="M28.2 38.338c.333.337.5.506.684.584a.995.995 0 0 0 .773 0c.185-.078.351-.247.683-.584l10.2-10.355.063-.065c.618-.627 1.184-1.201 1.582-1.732.44-.584.815-1.29.815-2.186 0-.895-.376-1.602-.815-2.186-.398-.53-.964-1.105-1.582-1.732L30.34 9.662c-.332-.337-.498-.506-.683-.584a.995.995 0 0 0-.773 0c-.185.078-.351.247-.683.584-.333.338-.499.506-.576.694a1.04 1.04 0 0 0 0 .784c.077.188.243.357.576.695L38.4 22.19c.1.1.029.274-.112.274H6.513c-.47 0-.705 0-.89.078a1.016 1.016 0 0 0-.546.554C5 23.284 5 23.523 5 24c0 .477 0 .716.077.904.102.251.299.45.546.554.185.078.42.078.89.078h31.775c.14 0 .211.173.112.274L28.2 36.166c-.332.337-.498.506-.575.694a1.04 1.04 0 0 0 0 .784c.077.188.243.357.576.694Z"
-                            clip-rule="evenodd"
-                            fill-rule="evenodd"
-                          ></path>
-                        </g>
-                      </svg>
-                    </span>
-                  </button>
-                </div>
+                >
+                  <div>Next</div>
+                  <span className="icon">
+                    <svg
+                      preserveAspectRatio="xMidYMid meet"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      fill="none"
+                      viewBox="0 0 48 48"
+                    >
+                      <g>
+                        <path
+                          data-follow-fill="currentColor"
+                          fill="currentColor"
+                          d="M28.2 38.338c.333.337.5.506.684.584a.995.995 0 0 0 .773 0c.185-.078.351-.247.683-.584l10.2-10.355.063-.065c.618-.627 1.184-1.201 1.582-1.732.44-.584.815-1.29.815-2.186 0-.895-.376-1.602-.815-2.186-.398-.53-.964-1.105-1.582-1.732L30.34 9.662c-.332-.337-.498-.506-.683-.584a.995.995 0 0 0-.773 0c-.185.078-.351.247-.683.584-.333.338-.499.506-.576.694a1.04 1.04 0 0 0 0 .784c.077.188.243.357.576.695L38.4 22.19c.1.1.029.274-.112.274H6.513c-.47 0-.705 0-.89.078a1.016 1.016 0 0 0-.546.554C5 23.284 5 23.523 5 24c0 .477 0 .716.077.904.102.251.299.45.546.554.185.078.42.078.89.078h31.775c.14 0 .211.173.112.274L28.2 36.166c-.332.337-.498.506-.575.694a1.04 1.04 0 0 0 0 .784c.077.188.243.357.576.694Z"
+                          clip-rule="evenodd"
+                          fill-rule="evenodd"
+                        ></path>
+                      </g>
+                    </svg>
+                  </span>
+                </button>
+              </div>
             </div>
           </div>
         </main>
